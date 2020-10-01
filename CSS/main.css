@@ -1,0 +1,1573 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden !important;
+}
+/* Red: #47b76f
+   Blue:
+   Green: #47b76f */
+ol, ul {
+	list-style: none;
+}
+section{
+    overflow-x: hidden;
+}
+header{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 5vw 20px 5vw;
+}
+.estCallDiv{
+    margin-top: 20px;
+    display: flex;
+}
+.getFreeEstBtn{
+    display: block;
+    padding: 15px 20px;
+    border: 4px solid #47b76f;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+    transition: ease-in-out .4s;
+    margin: 0 40px;
+}
+.getFreeEstBtn:hover{
+    background-color: #47b76f;
+    color: #fff;
+}
+.callBtn{
+    margin-top: 18px;
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 22px;
+    transition: ease-in-out .4s;
+}
+.callBtn:hover{
+    color: #ff7b00;
+}
+
+/* Navbar */
+
+#navbar{
+    overflow: hidden;
+    display: flex !important;
+    padding: 0 5vw;
+    background: #47b76f;
+    justify-content: center !important;
+    z-index: 999;
+    transition: ease-in-out .2s;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 90vw;
+    transition: ease-in-out .2s;
+    -webkit-box-shadow: 0px 6px 12px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 6px 12px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 6px 12px -6px rgba(0,0,0,0.75);
+}
+  
+.sticky + #section1 {
+    padding-top: 60px;
+}
+.sticky2 {
+    position: fixed;
+    top: 0;
+    width: 90vw;
+    transition: ease-in-out .2s;
+    -webkit-box-shadow: 0px 6px 12px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 6px 12px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 6px 12px -6px rgba(0,0,0,0.75);
+}
+  
+.sticky2 + #section1 {
+    padding-top: 60px;
+}
+.nav-item{
+    text-decoration: none;
+    font-size: 17px;
+    color: white;
+    font-weight: 500;
+    padding: 20px 30px 10px 30px;
+    
+}
+.slider{
+    transition: width .5s ease-in-out;
+    width: 0%;
+    margin-top: 10px;
+    height: 3px;
+    background-color: #161336;
+ }
+ .nav-item:hover .slider{
+    width: 100%;
+}
+/* Section 1 */
+#section1{
+    width: 100%!important;
+    background-attachment: fixed;
+    background-size: cover;
+    height: contain;
+    background-position: center center;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/exterior/main.jpg);
+}
+.darkBG{
+    background: rgba(0, 0, 0, 0.363);
+    width: inherit;
+    height: inherit;
+}
+.anotherOne{
+    padding-top: 5vh;
+}
+.anotherOne > .bigText{
+    color: white;
+    font-weight: 700;
+    font-size: 90px;
+}
+.anotherOne > .midText{
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.sectionOneBadges{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 15vw;
+}
+
+.sectionOneBadges img {
+    width: 150px;
+}
+
+
+/* Section #2 */
+
+#section2{
+    border-top: 5px solid #267742;
+    border-bottom: 5px solid #267742;
+    /* background-color: #161336; */
+    background: url(../images/exterior/exteriorSection2.jpg) center center no-repeat;
+    background-size: cover;
+}
+.section2Shade{
+    background-color: #16133667;
+    display: grid;
+    grid-template-columns: repeat(2, 6fr);
+    padding: 80px 10vw;
+    height: inherit;
+    width: inherit;
+}
+.white{
+    color: #fff;
+}
+.red{
+    color: #47b76f;
+}
+.ratDiv{
+    text-align: center;
+    padding: 40px;
+}
+.ratDiv > .red i{
+    font-size: 50px;
+    margin: 0 !important;
+}
+.ratDiv > .red{
+    font-size: 40px;
+    margin: 0 !important;
+}
+.ratDiv > .white{
+    font-size: 40px;
+    margin: 0 !important;
+}
+.sec2Div2{
+    margin: 100px 5vw 100px 5vw;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.911);
+    text-align: center;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 0px 22px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 22px -1px rgba(31, 31, 31, 0.75);
+    box-shadow: 0px 0px 22px -1px rgba(31, 31, 31, 0.75);
+}
+.paintingIcon{
+    color: #47b76f;
+    font-size: 40px;
+    transform: rotateZ(50deg);
+    margin: 5px 0;
+}
+.sec2Div2 > h1:nth-child(2){
+    color: #47b76f;
+    font-size: 29px;
+    font-weight: 500;
+    padding-bottom: 20px;
+    border-bottom: 4px solid #161336;
+}
+.estimateForm{
+    text-align: left;
+}
+.input{
+    width: 100%;
+    margin: 10px 0;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #161336;
+}
+.getEstBtn{
+    margin-top: 20px;
+    transform: translateX(40%);
+    padding: 15px 20px;
+    border: 4px solid #47b76f;
+    background-color: #47b76f;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    transition: ease-in-out .4s;
+    z-index: 10;
+}
+.getEstBtn:hover, .getEstBtn:active{
+    border: 4px solid #161336;
+    cursor: pointer;
+}
+
+/* Section #3  */
+#section3{
+    padding: 60px 10vw;
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    border-bottom: 4px solid #161336;
+    background-color: #f1f1f1;
+}
+#section3 > div{
+    padding: 20px 20px;
+    text-align: center;
+    max-width: 25vw;
+}
+#section3 > div > i {
+    font-size: 90px;
+    color: #47b76f;
+}
+
+/* Section #4 */
+
+#section4{
+    background-color: #e2e2e2;
+    padding:70px 10vw;
+    border-bottom: 4px solid #161336;
+    text-align: center;
+}
+#section4 > h1{
+    color: #161336;
+    font-size: 40px;
+}
+.section4Grid{
+    margin: 40px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, 4fr);
+}
+.section4Grid > div{
+    border-radius: 4px;
+    padding: 30px;
+    background-color: #f1f1f1;
+    -webkit-box-shadow: 0px 0px 22px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 22px -1px rgba(31, 31, 31, 0.75);
+    box-shadow: 0px 0px 22px -1px rgba(95, 95, 95, 0.884);
+    margin: 10px;
+}
+.section4Grid > div > h1{
+    font-size: 30px;
+}
+.serviceDiv img{
+    max-width: 100%;
+}
+.learnMore{
+    color: #47b76f;
+    font-size: 20px;
+}
+
+#section5{
+    border-top: 4px solid #161336;
+    border-bottom: 2px solid #161336;
+    padding: 50px 10vw;
+    background: #e2e2e2;
+    text-align: center;
+}
+#section5 > h2 {
+    font-size: 36px;
+}
+
+#section5Divs{
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+}
+.sec5Div{
+    padding: 20px;
+}
+.sec5Div > img{
+    max-width: 150px;
+}
+.sec5Div > h3{
+    font-size: 35px;
+}
+.sec5Div > h4{
+    font-size: 25px;
+    font-weight: 400;
+}
+p{
+    font-size: 20px;
+}
+
+/* Section #6 */
+
+#section6{
+    padding: 50px 10vw;
+    background: #f1f1f1;
+    text-align: center;
+}
+
+#section6 > h2{
+    font-size: 36px;
+}
+div#comparison { 
+    border-radius: 4px;
+    width: inherit;
+    height: 60vw;
+    max-width: 600px;
+    max-height: 600px;
+    overflow: hidden; }
+  div#comparison figure { 
+    background-image: url(../images/exterior/extAfter.jpg); 
+    background-size: cover;
+    position: relative;
+    font-size: 0;
+    width: 100%; 
+    height: 100%;
+    margin: 0; 
+  }
+  div#comparison figure > img { 
+    position: relative;
+    width: 100%;
+  }
+  div#comparison figure div { 
+    background-image: url(../images/exterior/extBefore.jpg);
+    background-size: cover;
+    position: absolute;
+    width: 50%; 
+    box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
+    overflow: hidden;
+    bottom: 0;
+    height: 100%;
+  }
+  #comparison2{
+      display: none;
+  }
+  
+  input[type=range]{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    position: relative;
+    top: -2rem; left: -2%;
+    background-color: rgba(44, 44, 44, 0.507);
+    width: 102%; 
+  }
+  input[type=range]:focus { 
+    outline: none; 
+  }
+  input[type=range]:active { 
+    outline: none;  
+  }
+  
+  input[type=range]::-moz-range-track { 
+    -moz-appearance:none;
+      height:15px;
+      width: 98%;
+      background-color: rgba(255,255,255,0.1); 
+      position: relative;
+      outline: none;    
+   }
+  input[type=range]::active { 
+    border: none; 
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance:none;
+      width: 20px; height: 15px;   
+      background: #47b76f;
+      border-radius: 0;
+     }
+  input[type=range]::-moz-range-thumb {
+    -moz-appearance: none;
+    width: 20px;
+    height: 15px;
+    background: #47b76f;
+    border-radius: 0;
+       }   
+  input[type=range]:focus::-webkit-slider-thumb {
+      background: rgba(255,255,255,0.5);
+     }
+  input[type=range]:focus::-moz-range-thumb {
+      background: rgba(255,255,255,0.5);
+     }
+
+.perfectChoiceDiv{
+    border-radius: 4px;
+    margin: 20px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 0px 5px -1px rgba(95, 95, 95, 0.884);
+    -moz-box-shadow: 0px 0px 5px -1px rgba(95, 95, 95, 0.884);
+    box-shadow: 0px 0px 5px -1px rgba(95, 95, 95, 0.884);
+}
+
+/* Section #7 */
+
+#section7{
+    padding: 20px 15vw;
+    background-color: #267742;
+}
+#section7 h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 35px;
+    color: white;
+    font-weight: 500;
+}
+#section7 h4 {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+}
+#section7 a{
+    display: block;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    width: 100%;
+    text-decoration: none;
+    color: #161336;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    transition: all .2s;
+    -webkit-box-shadow: 0px 0px 15px -1px rgba(223, 223, 223, 0.884);
+    -moz-box-shadow: 0px 0px 15px -1px rgba(223, 223, 223, 0.884);
+    box-shadow: 0px 0px 15px -1px rgba(223, 223, 223, 0.884);
+}
+#section7 a:hover{
+    color: #267742;
+    background-color: #0b1f12;
+    -webkit-box-shadow: 0px 0px 22px -1px rgba(31, 31, 31, 0.75);
+    -moz-box-shadow: 0px 0px 22px -1px rgba(31, 31, 31, 0.75);
+    box-shadow: 0px 0px 15px -1px rgba(31, 31, 31, 0.75);
+}
+#section8{
+    background: #161336;
+    padding: 20px 15vw;
+    color: white;
+}
+.sec8Divs{
+    display: flex; 
+    justify-content: space-evenly;
+    margin: 20px;
+}
+.sec8Divs > div:first-child > i{
+    font-size: 35px;
+    padding: 29% 0 0 0;
+}
+.sec8Divs > div:nth-child(2) > h4:first-of-type{
+    font-size: 17px;
+    padding: 0;
+    color: #f1f1f1;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+.sec8Divs > div:nth-child(2) > h4:nth-child(2){
+    font-size: 17px;
+    padding: 0;
+    color: #f1f1f1;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+.socialMediBtnContainer{
+    position: relative;
+    text-align: left;
+}
+.button {
+    padding: 15px;
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 25px;
+    text-decoration: none;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 2px;
+}
+.button-2 {
+    color: #ffffff;
+    text-decoration: none;
+    border: 3px solid #267742;
+    background-image: -webkit-linear-gradient(30deg, #47b76f 50%, transparent 50%);
+    background-image: linear-gradient(30deg, #47b76f 50%, transparent 50%);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    -webkit-transition: background 600ms ease-in-out;
+    transition: background 600ms ease-in-out;
+}
+.button-2:hover {
+    background-position: 100%;
+    color: #267742;
+}
+
+
+/* Footer */
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(4, 3fr);
+    background-color: #1b1b1b;
+    padding: 80px 10vw;
+    color: white;
+}
+footer ul{
+    padding: 0;
+    margin: 0;
+}
+footer ul li{
+    margin: 15px 0;
+}
+footer ul li a{
+    text-decoration: none;
+    color: rgb(206, 206, 206);
+}
+footer ul li a:hover{
+    text-decoration: none;
+    color: rgb(241, 241, 241);
+}
+.copyrights{
+    background-color: #000;
+    padding: 5px 10vw;
+    color: rgba(255, 255, 255, 0.507);
+    text-decoration: none;
+    font-weight: 300;
+}
+.copyrights a{
+    color: rgba(255, 255, 255, 0.507);
+}
+  
+.column2{
+    display: grid;
+    grid-template-columns: repeat(2, 6fr);
+}
+.column3{
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+}
+
+.overlay {
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 9%;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 26px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+#mobileNav{
+    overflow: hidden;
+    display: none;
+    background-color: #47b76f;
+    padding: 20px 10vw;
+    text-align: center;
+    z-index: 999;
+}
+.residentialDropdown{
+    position: fixed;
+    display: none;
+    background: #378f56;
+    z-index: 999;
+    transition: ease-in-out .2s;
+    padding: 0;
+    margin: 0;
+}
+.resBtn{
+    list-style: none;
+}
+/* Display Dropdowns on Hover */
+.resBtn:hover > .residentialDropdown {
+    display:inherit !important;
+    transition: ease-in-out .2s;
+}
+.residentialDropdown > li{
+	float:none;
+	display:list-item;
+    position: relative;
+}
+.residentialDropdown > li > a{
+    text-decoration: none;
+    width: inherit;
+    color: white;
+    font-size: 17px;
+    display: block;
+    padding: 10px 10px ;
+}
+.residentialDropdown > li > a:hover{
+    background-color: #267742;
+}
+.commercialDropdown{
+    position: fixed;
+    display: none;
+    background: #378f56;
+    z-index: 999;
+    transition: ease-in-out .2s;
+    padding: 0;
+    margin: 0;
+}
+.comBtn{
+    list-style: none;
+}
+/* Display Dropdowns on Hover */
+.comBtn:hover > .commercialDropdown {
+    display:inherit !important;
+    transition: ease-in-out .2s;
+}
+.commercialDropdown > li{
+	float:none;
+	display:list-item;
+    position: relative;
+}
+.commercialDropdown > li > a{
+    text-decoration: none;
+    width: inherit;
+    color: white;
+    font-size: 17px;
+    display: block;
+    padding: 10px 10px ;
+}
+.commercialDropdown > li > a:hover{
+    background-color: #267742;
+}
+
+
+/* Test drodown */
+
+
+
+.dropdown a {
+    text-decoration: none;
+}
+.dropdown [data-toggle="dropdown"] {
+    position: relative;
+    display: block;
+    width: inherit;
+    height: fit-content;
+}
+.dropdown .dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    margin: 0;
+}
+.dropdown .dropdown-menu li {
+    padding: 0;
+}
+.dropdown .dropdown-menu li a {
+    display: block;
+    color: #818181;
+    background: rgba(0, 0, 0, 0.651);
+    text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.3);
+}
+.dropdown .show, .dropdown .hide {
+    transform-origin: 50%, 0%;
+}
+.dropdown .show {
+    display: block;
+    max-height: 9999px;
+    transform: scaleY(1);
+    animation: showAnimation 0.5s ease-in-out;
+    transition: max-height 1s ease-in-out;
+}
+.dropdown .hide {
+    max-height: 0;
+    transform: scaleY(0);
+    animation: hideAnimation 0.4s ease-out;
+    transition: max-height 0.6s ease-out;
+}
+@keyframes showAnimation {
+    0% {
+        transform: scaleY(0.1);
+   }
+    40% {
+        transform: scaleY(1.04);
+   }
+    60% {
+        transform: scaleY(0.98);
+   }
+    80% {
+        transform: scaleY(1.04);
+   }
+    100% {
+        transform: scaleY(0.98);
+   }
+    80% {
+        transform: scaleY(1.02);
+   }
+    100% {
+        transform: scaleY(1);
+   }
+}
+@keyframes hideAnimation {
+    0% {
+        transform: scaleY(1);
+   }
+    60% {
+        transform: scaleY(0.98);
+   }
+    80% {
+        transform: scaleY(1.02);
+   }
+    100% {
+        transform: scaleY(0);
+   }
+}
+
+
+
+
+/* Test drodown */
+/* Interior Painting Page */
+.titleBox{
+    padding: 20px 10vw;
+    text-align: center;
+}
+.interiorFaq{
+    padding: 30px 10vw;
+    background-color: #e2e2e2;
+}
+
+.interiorFaq h1{
+    font-size: 30px;
+    color: #378f56;
+}
+.interiorGetest{
+    display: block;
+    padding: 15px 20px;
+    border: 4px solid #47b76f;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+    transition: ease-in-out .4s;
+    margin: 0 40px;
+}
+.interiorGetest:hover{
+    background-color: #47b76f;
+    color: #fff;
+}
+.interiorGetest2{
+    display: block;
+    background: #47b76f;
+    padding: 15px 20px;
+    border: 4px solid #47b76f;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+    transition: ease-in-out .4s;
+    margin: 0 40px;
+}
+.interiorGetest2:hover{
+    background-color: #267742;
+    color: white;
+}
+.slideShow{
+    padding: 100px 10vw;
+    text-align: center;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 20%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  .slideshowContainer{
+      display: none;
+  }
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    min-height: 350px;
+  }
+  .interiorFaq2{
+    padding: 30px 10vw;
+    background: url(../images/exterior/front3.jpg) center center no-repeat;
+    background-size: cover;
+}
+.reviewCarousel {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    background-color: rgba(250, 250, 250, 0.781);
+    min-height: 350px;
+    padding: 20px;
+  }
+  .reviewCarousel > .slideshow-container p{
+      color: black;
+
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  .zmySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 85%;
+    width: auto;
+    margin-top: -22px;
+    padding: 14px;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(187, 187, 187, 0.171);
+    border: 1px solid black;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(41, 41, 41, 0.8);
+  }
+  /* Next & previous buttons */
+  .zprev, .znext {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 10px 20px;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 50%;
+    user-select: none;
+    background-color: rgba(187, 187, 187, 0.171);
+    border: 1px solid black;
+  }
+  
+  /* Position the "next button" to the right */
+  .znext {
+    right: 20px;
+  }
+  .zprev {
+    left: 20px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .zprev:hover, .znext:hover {
+    background-color: rgba(41, 41, 41, 0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  .zdot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .zdot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+#services{
+    text-align: center;
+    background: url(../images/interior/Gallery/homestars_contractor_app_medium\ \(3\).jpeg) center center no-repeat;
+    background-size: cover;
+}
+#servicesExterior{
+    text-align: center !important;
+    background: url(../images/exterior/main\ \(2\).jpg) center center no-repeat !important;
+    background-size: cover !important;
+}
+.services{
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    padding-left: 10vw;
+}
+.services > div{
+    color: rgb(230, 230, 230);
+    text-align: left;
+}
+.blur{
+    background-color: rgba(8, 8, 8, 0.425);
+    padding: 50px 10vw;
+}
+.services > h3{
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.section2Interior{
+    background: url(../images/interior/vivid_1_medium.jpg) center center no-repeat; 
+    background-size: cover;
+    border-top: 5px solid #267742;
+    border-bottom: 5px solid #267742;
+}
+.section2Exterior{
+    background: url(../images/exterior/front4.jpg) center center no-repeat; 
+    background-size: cover;
+    border-top: 5px solid #267742;
+    border-bottom: 5px solid #267742;
+}
+.section2Cabinets{
+    background: url(../images/interior/Cabinets/6.jpg) center center no-repeat; 
+    background-size: cover;
+    border-top: 5px solid #267742;
+    border-bottom: 5px solid #267742;
+}
+#servicesCabinets{
+    text-align: center !important;
+    background: url(../images/interior/Cabinets/12.jpeg) center center no-repeat !important;
+    background-size: cover !important;
+}
+#servicesCabinets > .blur{
+    background-color: rgba(0, 0, 0, 0.658);
+}
+.saveMoneyCabinets{
+    text-align: center;
+    padding: 40px;
+    margin: 0 5vw;
+    border-radius: 20px;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(26, 26, 26, 0.521);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(26, 26, 26, 0.521);
+    box-shadow: 0px 0px 14px 0px rgba(26, 26, 26, 0.521);
+}
+#servicesDecks{
+    text-align: center !important;
+    background: url(../images/exterior/gazebo.jpg) center center no-repeat !important;
+    background-size: cover !important;
+}
+#servicesCarp{
+    text-align: center !important;
+    background: url(../images/interior/Gallery/homestars_contractor_app_medium\ \(2\).jpeg) center center no-repeat !important;
+    background-size: cover !important;
+}
+#servicesCom{
+    text-align: center !important;
+    background: url(../images/commercial/up.jpg) center center no-repeat !important;
+    background-size: cover !important;
+}
+.cabinetLI{
+    font-size: 20px;
+}
+.section2Decks{
+    background: url(../images/exterior/decks/sec2.jpg) center center no-repeat; 
+    background-size: cover;
+    border-top: 5px solid #267742;
+    border-bottom: 5px solid #267742;
+}
+.section2Carp{
+    background: url(../images/exterior/decks/1.jpg) center center no-repeat; 
+    background-size: cover;
+    border-top: 5px solid #267742;
+    border-bottom: 5px solid #267742;
+}
+.section2Com{
+    background: url(../images/commercial/1.jpg) center center no-repeat; 
+    background-size: cover;
+    border-top: 5px solid #267742;
+    border-bottom: 5px solid #267742;
+}
+.section2ceilings{
+    background: url(../images/interior/ceilings/2.jpeg) center center no-repeat; 
+    background-size: cover;
+    border-top: 5px solid #267742;
+    border-bottom: 5px solid #267742;
+}
+#section2ceilings{
+    text-align: center !important;
+    background: url(../images/interior/ceilings/2.jpeg) center center no-repeat !important;
+    background-size: cover !important;
+}
+#servicesCeiling > .blur{
+    background-color: rgba(36, 34, 34, 0.658);
+}
+#servicesCeiling{
+    text-align: center !important;
+    background: url(../images/interior/ceilings/6.jpeg) center center no-repeat !important;
+    background-size: cover !important;
+}
+.section2wallpaper{
+    text-align: center !important;
+    background: url(../images/interior/Wallpapers/thanos-pal-9OZfTe-y5T4-unsplash.jpg.jpg) center center no-repeat !important;
+    background-size: cover !important;
+}
+#servicesWallpaper{
+    text-align: center !important;
+    background: url(../images/interior/Wallpapers/LivingRoom.jpg) center center no-repeat !important;
+    background-size: cover !important;
+}
+
+@media screen and (max-width: 1100px){
+    #section6 .column2{
+        grid-template-columns: repeat(1, 12fr);
+        grid-column-end: auto;
+    }
+    #comparison{
+        display: none;
+    }
+    #comparison2{
+        display: block;
+    }
+    #section1{
+        height: max-content;
+    }
+    #section8{
+        padding:20px 5vw;
+    }
+    .sec8Divs > div:first-child > i{
+        font-size: 35px;
+        padding: 29% 0 0 0;
+        margin-right: 10px;
+    }
+    .services{
+        display: grid;
+        grid-template-columns: repeat(2, 6fr) !important;
+        padding-left: 10vw;
+    }
+}
+@media screen and (max-width: 900px){
+    .saveMoneyCabinets{
+        padding: 40px 10px;
+        margin: 0;
+    }
+    .saveMoneyCabinets ul{
+        padding: 0;
+        margin: 0;
+    }
+    .cabinetLI{
+        font-size: 17px;
+    }
+    .sec8Divs{
+        display: flex; 
+        justify-content: space-evenly;
+        margin: 20px;
+    }
+    .sec8Divs > div:first-child > i{
+        font-size: 35px;
+    }
+    .sec8Divs > div:nth-child(2) > h4:first-of-type{
+        font-size: 14px;
+        padding: 0;
+        color: #f1f1f1;
+        font-weight: 600;
+        padding: 0;
+        margin: 0;
+    }
+    .sec8Divs > div:nth-child(2) > h4:nth-child(2){
+        font-size: 13px;
+        padding: 0;
+        color: #f1f1f1;
+        font-weight: 500;
+        padding: 0;
+        margin: 0;
+    }
+    .section2Shade{
+        grid-template-columns: repeat(1, 12fr);
+        padding: 80px 10vw;
+    }
+    .getEstBtn{
+        width: 100%;
+        transform: translateX(0) !important;
+    }
+    .column2{
+        grid-template-columns: repeat(1, 12fr);
+    }
+    #section7 a{
+        margin-top: 20px;
+    }
+    .sectionOneBadges img {
+        width: 100px;
+    }
+    .section4Grid{
+        grid-template-columns: repeat(1, 12fr);
+    }
+    footer{
+        grid-template-columns: repeat(2, 6fr);
+    }
+    .copyrights{
+        font-size: 10px;
+    }
+    #navbar{
+        display: none !important;
+    }
+    #mobileNav{
+        overflow: hidden;
+        display: block;
+    }
+    .logoDiv > a > img{
+        width: 45% !important;
+    }
+}
+@media screen and (max-width: 720px){
+    #section3{
+        padding: 60px 2vw;
+        grid-template-columns: repeat(1, 6fr);
+    }
+    #mobileNav span{
+        font-size: 18px !important;
+    }
+    .anotherOne > .bigText{
+        color: white;
+        font-weight: 700;
+        font-size: 40px;
+    }
+    .anotherOne > .midText{
+        color: white;
+        font-weight: 700;
+        font-size: 20px;
+    }
+    .sectionOneBadges img {
+        width: 70px;
+    }
+    .section2Shade{
+        padding: 80px 2vw;
+    }
+    #section3 > div {
+        padding: 20px 20px;
+        text-align: center;
+        max-width: 96vw;
+    }
+    #section4 > h1{
+        color: #161336;
+        font-size: 26px;
+    }
+    p{
+        font-size: 14px;
+    }
+    #section4{
+        padding: 70px 5vw;
+    }
+    .section4Grid > div > h1{
+        font-size: 23px;
+    }
+    .serviceDiv img{
+        max-width: 100%;
+    }
+    .learnMore{
+        color: #47b76f;
+        font-size: 20px;
+    }
+    #section5Divs{
+        grid-template-columns: repeat(1, 12fr);
+    }
+    #section5{
+        padding: 50px 5vw;
+    }
+    #section5 .getEstBtn{
+        padding: 10px 9px;
+        font-size: 18px;
+        width: fit-content;
+        display: block;
+    }
+    #section6{
+        padding: 50px 2vw;
+    }
+    #comparison2 img{
+        max-width: 85vw;
+    }
+    #section7{
+        padding-right: 2vw;
+        padding-left: 2vw;
+        text-align: center;
+    }
+    #section7 a{
+        text-align: center;
+        display: block;
+        padding: 10px 5px;
+        width: inherit;
+    }
+    #section8{
+        padding: 20px 2vw;
+    }
+    .column3{
+        grid-template-columns: repeat(1, 12fr);
+    }
+    footer{
+        grid-template-columns: repeat(1, 12fr);
+    }
+    .sec2Div > h1{
+        font-size: 25px !important;
+    }
+}
+@media screen and (min-width: 1600px){
+    #section1{
+        height: contain !important;
+    }
+}
+@media screen and (max-width: 1400px){
+    .estCallDiv{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .callBtn{
+        font-size: 18px;
+        margin: 10px 0 0 40px;
+    }
+    .getEstBtn{
+        transform: translateX(10%);
+    }
+}
+
+@media screen and (max-width: 1020px){
+    header{
+        display: block;
+        padding: 30px 2vw;
+    }
+    .logoDiv{
+        text-align: center;
+    }
+    .estCallDiv{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    p{
+        font-size: 16px;
+    }
+    
+}
+@media screen and (max-width: 700px){
+    .getFreeEstBtn{
+        padding: 9px 14px;
+        font-size: 15px;
+        margin: 0 5px 0 0;
+    }
+    .callBtn{
+        font-size: 15px;
+        padding: 9px 0;
+    }
+    .interiorGetest{
+        display: block;
+        padding: 15px 20px;
+        border: 4px solid #47b76f;
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        font-size: 17px;
+        transition: ease-in-out .4s;
+        margin: 0 40px;
+        width: inherit !important;
+    }
+    .interiorGetest2{
+        display: block;
+        background: #47b76f;
+        padding: 10px 10px;
+        width: 70%;
+        border: 4px solid #47b76f;
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        font-size: 18px;
+        transition: ease-in-out .4s;
+        margin: 0 40px;
+    }
+}
+
+  .section2contact{
+    text-align: center !important;
+    background: url(../images/contact/2.jpeg) center center no-repeat !important;
+    background-size: cover !important;
+   
+}
+.spepcial {
+  
+    border-radius:5px;
+    padding: 20px ;
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    
+  }
+  .spepcial:hover {
+      opacity: 0.7;
+  }
+  .spepcial {
+    background: #3B5998;
+    color: white;
+    position: relative;
+    bottom: 50px;
+  }
+  .email{
+    font-size:20px ;
+    position: relative;
+    bottom:40px;
+    color: white;
+  }
+  .num{
+    font-size:20px ;
+    position: relative;
+    bottom:40px;
+    color: white;
+}
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .anotherOne > .fa-facebook {
+        background: #3B5998;
+        color: white;
+        position: relative;
+        bottom: 30px;
+      }
+      .anotherOne > .email {
+        font-size:15px ;
+        position: relative;
+        bottom:40px;
+        color: white;
+      }
+    
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+    .row{
+        display: none;
+    }
+    .slideshowContainer{
+        display: block;
+    }
+    #services{
+        text-align: center;
+        background: url(../images/interior/homestars_contractor_app_medium.jpeg) center center no-repeat !important;
+        background-size: cover !important;
+    }
+    #servicesExterior{
+        text-align: center !important;
+        background: url(../images/exterior/main\ \(2\).jpg) center center no-repeat !important;
+        background-size: cover !important;
+    }
+    .services{
+        display: grid;
+        grid-template-columns: repeat(1, 12fr) !important;
+        padding-left: 10vw;
+    }
+    .section2Interior{
+        background-image: url(../images/interior/vivid_1_medium.jpg), url(../images/interior/Gallery/12.jpg) !important; 
+        background-size: 100% 50%, 100% 50% !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-position: top left, bottom left !important;
+    }
+    .section2Exterior{
+        background-image: url(../images/interior/vivid_1_medium.jpg), url(../images/interior/Gallery/12.jpg) !important; 
+        background-size: 100% 50%, 100% 50% !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-position: top left, bottom left !important;
+    }
+    .section2Cabinets{
+        background-image: url(../images/interior/Cabinets/6.jpg), url(../images/interior/Cabinets/1.jpg) !important; 
+        background-size: 100% 50%, 100% 50% !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-position: top left, bottom left !important;
+    }
+    .section2Decks{
+        background-image: url(../images/exterior/decks/mobile.jpg), url(../images/exterior/decks/sec2.jpg) !important; 
+        background-size: 100% 50%, 100% 50% !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-position: top left, bottom left !important;
+    }
+    .section2Carp{
+        background-image: url(../images/exterior/decks/1.jpg), url(../images/exterior/decks/JPEG_20200915_154649_full_medium.jpg) !important; 
+        background-size: 170% 50%, 100% 50% !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-position: top left, bottom left !important;
+    }
+    .section2Com{
+        background-image: url(../images/commercial/1.jpg), url(../images/commercial/2.jpeg) !important; 
+        background-size: 100% 50%, 100% 50% !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-position: top left, bottom left !important;
+    }
+    #servicesCabinets{
+        text-align: center !important;
+        background: url(../images/interior/Cabinets/12.jpeg) center center no-repeat !important;
+        background-size: cover !important;
+    }
+    .interiorFaq > .column2 > div > img{
+        width: 100% !important;
+    }
+    #section2{
+        background-image:url(../images/interior/Gallery/1.jpg), url(../images/exterior/exteriorSection2.jpg) !important; 
+        background-size: 100% 50%, 100% 50% !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-position: top left, bottom left !important;
+    }
+    .section2ceilings{
+        background-image: url(../images/interior/ceilings/4.jpg), url(../images/interior/ceilings/3.jpg) !important; 
+        background-size: 100% 50%, 100% 50% !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-position: top left, bottom left !important;
+    }
+    #section2ceilings{
+        text-align: center !important;
+        background: url(../images/interior/Cabinets/12.jpeg) center center no-repeat !important;
+        background-size: cover !important;
+    }
+    #servicesCeiling{
+        background-image: url(../images/interior/ceilings/7.jpg), url(../images/interior/ceilings/8.jpg) !important; 
+        background-size: 100% 50%, 100% 50% !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-position: top left, bottom left !important;
+    }
+    .reviewCarousel > .slideshow-container p{
+        color: black;
+        font-size: 16px;
+    }
+    .reviewCarousel > .slideshow-container{
+        padding: 0 40px;
+    }
+    
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
