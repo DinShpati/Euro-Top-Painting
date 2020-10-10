@@ -1,48 +1,4 @@
-<?php
-
-require "vendor/autoload.php";
-
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-$mailer = new PHPMailer();
-if(isset($_POST['submit'])){
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $desc = $_POST['desc'];
-    $date = $_POST['date'];
-    
-    try {
-        $mailer->isSMTP();
-
-
-        $mailer->Host = 'smtp.hostinger.com';
-        $mailer->SMTPAuth = true;
-        $mailer->Username = 'estimates@vividcoatpainting.com';
-        $mailer->Password = 'Z3tT57cW_$_!_*';
-        $mailer->SMTPSecure = 'tls';
-        $mailer->Port = 587;
-        $mailer-> SMTPAuth = true;
-
-
-        $mailer->setFrom('estimates@vividcoatpainting.com', 'Estimate');
-        $mailer->addAddress('vividcoatpainting@gmail.com', 'Veton Ramadani');
-
-        $mailer->isHTML(false);
-        $mailer->Subject = ($name . " is asking for a estimate");
-        $mailer->Body = ("$desc . \n\n . Desired Start Date:  . $date . \n\n . Customer Number: . $phone . \n . Customer Email - Click Here to reply: . $email");
-
-        $mailer->send();
-        $mailer->ClearAllRecipients();
-        echo "<script>alert('Your message was recieved, we will get back to you shortly');</script>";
-    }catch (Exception $e) {
-        echo "<script>alert('Your message was not recieved please try calling or emailing us');</script>";
-    }
-}
-
-?>
+<?php include('emailSender.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,54 +7,45 @@ if(isset($_POST['submit'])){
     <link rel="apple-touch-icon" sizes="180x180" href="images/icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/icon.png">
-    <meta content="VividCoat Painting LTD" property=og:title>
-    <meta content="VividCoat Painting LTD - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Vividcoatpaintintg ltd. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee."
+    <meta content="Euro Top Painting - The best painting company in Toronto, CA!" property=og:title>
+    <meta content="Euro Top Painting - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Euro Top Painting ltd. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee."
           property=og:description>
-    <meta content=vividcoat.com property=og:url>
+    <meta content=EuroTopPainting.com property=og:url>
     <meta content=website property=og:type>
     <meta content=images/icon.png property=og:image>
     <meta content=summary_large_image property=twitter:card>
     <meta name="description"
-          content="VividCoat Painting LTD - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Vividcoatpaintintg ltd. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee.">
+          content="Euro Top Painting - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Euro Top Painting ltd. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee.">
     <meta property="og:image" content="images/main.jpg">
-    <title>VividCoat Painting LTD - Quality Deck Painting in Toronto, CA</title>
+    <title>Euro Top Painting - The best painting company in Toronto, CA!</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="CSS/reset.css">
-    <link rel="stylesheet" href="CSS/m.css">
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/939c3b7b3f.js" crossorigin="anonymous"></script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179197814-1">
-        </script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'UA-179197814-1');
-        </script>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
 
 </head>
 <body>
 
 <?php include("header.php"); ?>   
 
-    <section id="section1" style="background-image: url(./images/exterior/decks/main.jpg);">
+    <section id="section1" style="background-image: url(./images/exterior/decks/1.jpg);">
         <div class="darkBG" style="background-color: rgba(39, 30, 19, 0.404);">
             <div class="anotherOne" >
                 <h1 class="bigText">Deck Painting Services</h1>
-                <h2 class="midText">If you're looking to update your deck and extend its lifespan with a fresh paint job, VividCoat Painting can professionally upgrade your deck, patio, or porch.</h2>
+                <h2 class="midText">We've stained, sealed, and refinished decks throughout the area,<br> and we know how to prepare and finish wood to make<br> your deck one of the most distinctive in your neighborhood.</h2>
                 <div class="sectionOneBadges">
-                    <div> <img src="images/homestars.png" alt="VividCoat painting - homestars verified"> </div>
-                    <div> <img src="images/30YearsInBussiness.png" alt="VividCoat painting - homestars verified"> </div>
-                    <div><img src="images/warranty (1).png" alt="VividCoat painting - homestars verified"></div>
-                    <div><img src="images/Homestars-best-of-2020-2.png" alt="VividCoat painting - homestars verified"></div>
+                    <div> <img src="images/homestars.png" alt="Euro Top painting - homestars verified"> </div>
+                    <div> <img src="images/30YearsInBussiness.png" alt="Euro Top painting - homestars verified"> </div>
+                    <div><img src="images/warranty (1).png" alt="Euro Top painting - homestars verified"></div>
+                    <div><img src="images/Homestars-best-of-2020-2.png" alt="Euro Top painting - homestars verified"></div>
                 </div>
             </div>
         </div>
@@ -109,11 +56,11 @@ if(isset($_POST['submit'])){
                 <h1 style="font-size: 30px;" class="white">Deck, Balcony, & Porch Painting Contractors</h1>
                 <hr>
                 <div class="ratDiv">
-                    <p style="color: white;">Your deck is an extension of your home. It offers you an outdoor space where you can relax and entertain family or friends. With a deck that is properly painted or stained, you can extend its lifetime, increase the value of your home, and improve your home's overall aesthetic appeal.</p>
+                    <p style="color: white;">Decks are one of the best parts of a home. They provide a relaxing environment to enjoy with your friends and family. Don't risk losing that by leaving your deck untreated or go unmaintained for too long.  For over 25 years, Euro Top Painting has offered expert deck staining and painting services. Let us be the company you go to for protection.</p>
                 </div>
                 <hr>
                 <div class="ratDiv">
-                    <p style="color: white;">Refinishing your deck is a complicated process. Between stripping the existing paint or stain, sanding, applying your paint or stain, you're talking about multiple weekends of work. That is why it is best to hire.a professional. They have the proper tools and experience to do the job right the first time.</p>
+                    <p style="color: white;">You deserve to know the cost of refinishing your deck with total and complete certainty. Some deck refinishing companies offer only a very rough estimate, leaving the real cost of supplies and the true cost of labor to be tallied once the job is done. With Euro Top Painting, GTA Area's best deck refinishing company, you won't have any surprise fees or unexpected costs.</p>
                 </div>
                 <hr>
                 <div class="ratDiv">
@@ -143,13 +90,17 @@ if(isset($_POST['submit'])){
     <div class="titleBox"><h1>Get started in <span style="color: #0eb448;">three</span> easy steps!</h1></div>
     <section id="section3">
         <div>
-            <h1 style="font-size: 30px;color: #0eb448;">#1</h1>
+            <div style="text-align: center;">
+                <h1 style="font-size: 30px;color: #0eb448; width:45px; height:45px; border-radius:50%;box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15); margin:auto; padding: 20px;">#1</h1>
+            </div>
             <h2>Get A Free Estimate</h2>
             <p>We start the interior painting process by understanding more about your needs. When you call or email in you can expect a friendly customer service representative to help you with your estimate. From there, you will be paired with an insured and licensed contractor to help you with your needs. 
             </p>
         </div>
         <div>
-            <h1 style="font-size: 30px;color: #0eb448;">#2</h1>
+        <div style="text-align: center;">
+                <h1 style="font-size: 30px;color: #0eb448; width:45px; height:45px; border-radius:50%;box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15); margin:auto; padding: 20px;">#2</h1>
+            </div>
             <h2>Property inspection</h2>
             <p>
                 After you speak with a representative, we then schedule a time and a date to visit the property. From here, we complete a property inspection to learn more about your project. Here you will find a professional estimate written out to you on a clipboard from a friendly expert in our companies apparel.
@@ -157,43 +108,34 @@ if(isset($_POST['submit'])){
             </p>
         </div>
         <div>
-            <h1 style="font-size: 30px;color: #0eb448;">#3</h1>
+        <div style="text-align: center;">
+                <h1 style="font-size: 30px;color: #0eb448; width:45px; height:45px; border-radius:50%;box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15); margin:auto; padding: 20px;">#3</h1>
+            </div>
             <h2>Painting & Quality Check</h2>
             <p>Finally, we start the project and update you as we move on. After the paitning is finished we will do a quality check and make sure that you are 100% satisified with our
                 work. We do not consider the project finshed until you are happy with the results.
             </p>
         </div>
     </section>
-    <section id="section7">
-        <div class="column2">
-            <div>
-                <h1>SCHEDULE AN ESTIMATE</h1>
-                <h4>Call us today to schedule a free estimate</h4>
-            </div>
-            <div>
-                <a href="contact.php">Schedule Now!</a>
-            </div>
-        </div>
-    </section>
 
     <section id="section5">
         <h1 style="font-size: 30px;">Why choose <span style="color: #0eb448;">us?</span></h1>
-        <h3>VividCoat Painting sets the highest standard in service and customer satisfaction.</h3>
+        <h3>Euro Top Painting sets the highest standard in service and customer satisfaction.</h3>
         <div style="height: 3px; background-color: #47b76f; width: inherit; margin: 0 25vw;"></div>
         <br>
         <br>
         <div id="section5Divs">
             <div>
                 <h3>100% <span style="color: #0eb448;">Satisfaction</span> Gurantee</h3>
-                <img loading="lazy" src="images/100Sat.png" alt="VividCoat Painting LTD 100% Satisfatcion gurantee" style="max-width: 33%;">
+                <img loading="lazy" src="images/100Sat.png" alt="Euro Top Painting LTD 100% Satisfatcion gurantee" style="max-width: 33%;">
             </div>
             <div>
                 <h3>Unmatched <span style="color: #0eb448;">2-year</span> Quality Warranty</h3>
-                <img loading="lazy" src="images/2yeargur.png" alt="VividCoat Painting LTD 2 year gurantee" style="max-width: 33%;">
+                <img loading="lazy" src="images/2yeargur.png" alt="Euro Top Painting LTD 2 year gurantee" style="max-width: 33%;">
             </div>
             <div>
                 <h3><span style="color: #0eb448;">30-Years </span>experience</h3>
-                    <img loading="lazy" src="images/30inBus.png" alt="VividCoat Painting LTD 30 years in business" style="max-width: 33%;">
+                    <img loading="lazy" src="images/30inBus.png" alt="Euro Top Painting LTD 30 years in business" style="max-width: 33%;">
             </div>
             
         </div>
@@ -201,7 +143,7 @@ if(isset($_POST['submit'])){
     <section id="servicesDecks">
         <div class="blur">
             <h1 style="font-size: 30px;color: white;">Deck, Patio, & Porch Paitning <span style="color: #0eb448;">Services</span></h1>
-            <h3 style="color: white;">No matter what type of room or surface you are looking to paint, VividCoat Painting is there to help.</h3>
+            <h3 style="color: white;">No matter what type of room or surface you are looking to paint, Euro Top Painting is there to help.</h3>
             <div style="height: 3px; background-color: #47b76f; width: inherit; margin: 0 25vw;"></div>
             <br>
             <br>
@@ -239,13 +181,13 @@ if(isset($_POST['submit'])){
                 <p>Decks should be refinished every two to three years. Deck maintenance, and when you should do it, depends on variables such as the type of deck material, the current condition of the wood, the weather of the area you live in, and more.</p>
             </div>
             <div style="text-align: center;">
-                <img loading="lazy" style="width: 80%;" src="images/exterior/decks/1.jpg" alt="Would it be possible to revieve a free estimate before starting any work? VividCoat Painting LTD">
+                <img loading="lazy" style="width: 80%;" src="images/exterior/decks/1.jpg" alt="Would it be possible to revieve a free estimate before starting any work? Euro Top Painting LTD">
             </div>
         </div>
         <hr>
         <div class="column2" style="margin-top: 50px; margin-bottom: 50px;">
             <div style="text-align: center;">
-                <img loading="lazy" style="width: 80%;" src="images/exterior/decks/back.jpg" alt="Would it be possible to revieve a free estimate before starting any work? VividCoat Painting LTD">
+                <img loading="lazy" style="width: 80%;" src="images/exterior/backOfHome.jpg" alt="Would it be possible to revieve a free estimate before starting any work? Euro Top Painting LTD">
             </div>
             <div>
                 <h1>
@@ -265,13 +207,13 @@ if(isset($_POST['submit'])){
                 </p>
             </div>
             <div style="text-align: center;">
-                <img loading="lazy" style="width: 80%;" src="images/exterior/gazebo.jpg" alt="Would it be possible to revieve a free estimate before starting any work? VividCoat Painting LTD">
+                <img loading="lazy" style="width: 80%;" src="images/exterior/b2.jpg" alt="Would it be possible to revieve a free estimate before starting any work? Euro Top Painting LTD">
             </div>
         </div>
         <hr>
         <div class="column2" style="margin-top: 50px;margin-bottom: 50px;">
             <div style="text-align: center;">
-                <img loading="lazy" style="width: 80%;" src="images/exterior/decks/front.jpeg" alt="Would it be possible to revieve a free estimate before starting any work? VividCoat Painting LTD">
+                <img loading="lazy" style="width: 80%;" src="images/exterior/exteriorSection2.jpg" alt="Would it be possible to revieve a free estimate before starting any work? Euro Top Painting LTD">
             </div>
             <div>
                 <h1>
@@ -302,27 +244,21 @@ if(isset($_POST['submit'])){
               <img class="galImg" loading="lazy" src="images/exterior/decks/1566406590906-JPEG_20190821_125629_full_medium.jpg">
               <img class="galImg" loading="lazy" src="images/exterior/decks/1566406594435-JPEG_20190821_125631_full_medium.jpg">
               <img class="galImg" loading="lazy" src="images/exterior/decks/front.jpeg">
-              <img class="galImg" loading="lazy" src="images/exterior/decks/JPEG_20200915_154640_full_medium.jpg">
               <img class="galImg" loading="lazy" src="images/exterior/decks/sec2.jpg">
-              <img class="galImg" loading="lazy" src="images/exterior/decks/IMG-20200918-WA0000.jpg">
               
             </div>
             <div class="column">
                 <img class="galImg" loading="lazy" src="images/exterior/decks/1566406597729-JPEG_20190821_125635_full_medium.jpg">
                 <img class="galImg" loading="lazy" src="images/exterior/decks/1566406598837-JPEG_20190821_125637_full_medium.jpg">
                 <img class="galImg" loading="lazy" src="images/exterior/decks/1566406602580-JPEG_20190821_125641_full_medium.jpg">
-                <img class="galImg" loading="lazy" src="images/exterior/decks/JPEG_20200915_154643_full_medium.jpg">
-                <img class="galImg" loading="lazy" src="images/exterior/decks/IMG-20200918-WA0003.jpg">
+                
             </div>
             <div class="column">
                 <img class="galImg" loading="lazy" src="images/exterior/decks/1566406607924-JPEG_20190821_125647_full_medium.jpg">
                 <img class="galImg" loading="lazy" src="images/exterior/decks/1566406609417-JPEG_20190821_125648_full_medium.jpg">
                 <img class="galImg" loading="lazy" src="images/exterior/decks/1567969870438-JPEG_20190908_151109_full_medium.jpg">
                 <img class="galImg" loading="lazy" src="images/exterior/decks/exteriorSection2.jpg">
-                <img class="galImg" loading="lazy" src="images/exterior/decks/gazebo.jpg">
-                <img class="galImg" loading="lazy" src="images/exterior/decks/JPEG_20200915_154649_full_medium.jpg">
                 <img class="galImg" loading="lazy" src="images/exterior/decks/outdoors.jpeg">
-                <img class="galImg" loading="lazy" src="images/exterior/decks/IMG-20200918-WA0001.jpg">
             </div>
             <div class="column">
                 <img class="galImg" loading="lazy" src="images/exterior/decks/1567969873967-JPEG_20190908_151112_full_medium.jpg">
@@ -331,8 +267,8 @@ if(isset($_POST['submit'])){
                 <img class="galImg" loading="lazy" src="images/exterior/decks/backside3.jpg">
                 <img class="galImg" loading="lazy" src="images/exterior/decks/gazebo2.jpg">
                 <img class="galImg" loading="lazy" src="images/exterior/decks/main.jpg">
-                <img class="galImg" loading="lazy" src="images/exterior/decks/mobile.jpg">
-                <img class="galImg" loading="lazy" src="images/exterior/decks/IMG-20200918-WA0002.jpg">
+                
+                
             </div>
           </div>
           <div class="slideshowContainer">
@@ -359,11 +295,6 @@ if(isset($_POST['submit'])){
                 </div>
               
                 <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/exterior/decks/JPEG_20200915_154640_full_medium.jpg" width="100%">
-                  <div class="text"></div>
-                </div>
-              
-                <div class="mySlides fade">
                   <img class="galImg" loading="lazy" src="images/exterior/decks/sec2.jpg" width="100%">
                   <div class="text"></div>
                 </div>
@@ -379,10 +310,6 @@ if(isset($_POST['submit'])){
               
                 <div class="mySlides fade">
                   <img class="galImg" loading="lazy" src="images/exterior/decks/1566406602580-JPEG_20190821_125641_full_medium.jpg" width="100%">
-                  <div class="text"></div>
-                </div>
-                <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/exterior/decks/JPEG_20200915_154643_full_medium.jpg" width="100%">
                   <div class="text"></div>
                 </div>
               
@@ -407,10 +334,7 @@ if(isset($_POST['submit'])){
                   <img class="galImg" loading="lazy" src="images/exterior/decks/gazebo.jpg" width="100%">
                   <div class="text"></div>
                 </div>
-                <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/exterior/decks/JPEG_20200915_154649_full_medium.jpg" width="100%">
-                  <div class="text"></div>
-                </div>
+                
                 <div class="mySlides fade">
                   <img class="galImg" loading="lazy" src="images/exterior/decks/outdoors.jpeg" width="100%">
                   <div class="text"></div>
@@ -474,9 +398,7 @@ if(isset($_POST['submit'])){
                 <span class="dot" onclick="currentSlide(20)"></span>
                 <span class="dot" onclick="currentSlide(21)"></span>
                 <span class="dot" onclick="currentSlide(22)"></span>
-                <span class="dot" onclick="currentSlide(23)"></span>
-                <span class="dot" onclick="currentSlide(24)"></span>
-                <span class="dot" onclick="currentSlide(25)"></span>
+                
               </div>
           </div>
     </section>
@@ -488,25 +410,6 @@ if(isset($_POST['submit'])){
             </div>
             <div>
                 <a href="contact.php">Schedule Now!</a>
-            </div>
-        </div>
-    </section>
-    <section id="section8">
-        <div class="column3">
-            <div class="sec8Divs">
-                <div><i class="fas fa-map-marked-alt"></i></div>
-                <div><h4>VividCoat Painting LTD</h4>
-                    <h4>Ontario, Canada</h4></div> 
-            </div>
-            <div class="sec8Divs">
-                <div style="margin: 0 10px 10px 0;"><i class="far fa-envelope"></i></div>
-                <div><h4>Our Email</h4>
-                    <h4>VividCoatPainting@hotmail.com</h4></div> 
-            </div>
-            <div class="sec8Divs">
-                <div><i class="fas fa-mobile"></i></div>
-                <div><h4>Call Us For An Estimate</h4>
-                    <h4>416-566-1322</h4></div> 
             </div>
         </div>
     </section>

@@ -1,48 +1,4 @@
-<?php
-
-require "vendor/autoload.php";
-
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-$mailer = new PHPMailer();
-if(isset($_POST['submit'])){
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $desc = $_POST['desc'];
-    $date = $_POST['date'];
-    
-    try {
-        $mailer->isSMTP();
-
-
-        $mailer->Host = 'smtp.hostinger.com';
-        $mailer->SMTPAuth = true;
-        $mailer->Username = 'estimates@vividcoatpainting.com';
-        $mailer->Password = 'Z3tT57cW_$_!_*';
-        $mailer->SMTPSecure = 'tls';
-        $mailer->Port = 587;
-        $mailer-> SMTPAuth = true;
-
-
-        $mailer->setFrom('estimates@vividcoatpainting.com', 'Estimate');
-        $mailer->addAddress('vividcoatpainting@gmail.com', 'Veton Ramadani');
-
-        $mailer->isHTML(false);
-        $mailer->Subject = ($name . " is asking for a estimate");
-        $mailer->Body = ("$desc . \n\n . Desired Start Date:  . $date . \n\n . Customer Number: . $phone . \n . Customer Email - Click Here to reply: . $email");
-
-        $mailer->send();
-        $mailer->ClearAllRecipients();
-        echo "<script>alert('Your message was recieved, we will get back to you shortly');</script>";
-    }catch (Exception $e) {
-        echo "<script>alert('Your message was not recieved please try calling or emailing us');</script>";
-    }
-}
-
-?>
+<?php include('emailSender.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,38 +7,29 @@ if(isset($_POST['submit'])){
     <link rel="apple-touch-icon" sizes="180x180" href="images/icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/icon.png">
-    <meta content="VividCoat Painting LTD" property=og:title>
-    <meta content="VividCoat Painting LTD - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Vividcoatpaintintg ltd. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee."
+    <meta content="Euro Top Painting - The best painting company in Toronto, CA!" property=og:title>
+    <meta content="Euro Top Painting - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Euro Top Painting ltd. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee."
           property=og:description>
-    <meta content=vividcoat.com property=og:url>
+    <meta content=EuroTopPainting.com property=og:url>
     <meta content=website property=og:type>
     <meta content=images/icon.png property=og:image>
     <meta content=summary_large_image property=twitter:card>
     <meta name="description"
-          content="VividCoat Painting LTD - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Vividcoatpaintintg ltd. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee.">
+          content="Euro Top Painting - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Euro Top Painting ltd. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee.">
     <meta property="og:image" content="images/main.jpg">
-    <title>VividCoat Painting LTD - Testimonials and Reviews. See what our customers have to say.</title>
+    <title>Euro Top Painting - The best painting company in Toronto, CA!</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="CSS/reset.css">
-    <link rel="stylesheet" href="CSS/m.css">
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/939c3b7b3f.js" crossorigin="anonymous"></script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179197814-1">
-        </script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'UA-179197814-1');
-        </script>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
 
 </head>
 <body>
@@ -90,21 +37,21 @@ if(isset($_POST['submit'])){
 <?php include("header.php"); ?> 
 
 
-    <section id="section1" style="background-image: url(./images/customerReviews.jpg);">
+    <section id="section1" style="background-image: url(./images/exterior/house-Front.jpg);">
         <div class="darkBG" style="background-color: rgba(39, 30, 19, 0.404);">
             <div class="anotherOne" >
                 <h1 class="bigText">Testimonials & Reviews</h1>
                 <h2 class="midText" style="font-size: 25px; padding: 0 5vw;">We’re only happy when our customers are happy!</h2>
                 <div class="sectionOneBadges">
-                    <div> <img src="images/homestars.png" alt="VividCoat painting - homestars verified"> </div>
-                    <div> <img src="images/30YearsInBussiness.png" alt="VividCoat painting - homestars verified"> </div>
-                    <div><img src="images/warranty (1).png" alt="VividCoat painting - homestars verified"></div>
-                    <div><img src="images/Homestars-best-of-2020-2.png" alt="VividCoat painting - homestars verified"></div>
+                    <div> <img src="images/homestars.png" alt="Euro Top painting - homestars verified"> </div>
+                    <div> <img src="images/30YearsInBussiness.png" alt="Euro Top painting - homestars verified"> </div>
+                    <div><img src="images/warranty (1).png" alt="Euro Top painting - homestars verified"></div>
+                    <div><img src="images/Homestars-best-of-2020-2.png" alt="Euro Top painting - homestars verified"></div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section2Com">
+    <section class="section2Test">
         <div class="section2Shade" style="background-color: #352b1985;">
             <div class="sec2Div" style="text-align: center !important;">
                 <h1 style="font-size: 30px;" class="white">Interior & Exterior House Painting Contractors</h1>
@@ -117,14 +64,14 @@ if(isset($_POST['submit'])){
                 <hr>
                 <div class="ratDiv">
                     <h3 class="red"><i class="fas fa-thumbs-up"></i></h3>
-                    <h3 class="red">+1500</h3>
-                    <h2 class="white">Happy Customers!</h2>
+                    <h3 class="red">5 stars</h3>
+                    <h2 class="white">Check our Homestars Reviews</h2>
                 </div>
                 <hr>
                 <div class="ratDiv">
                     <h3 class="red"><i class="fas fa-money-bill-wave-alt"></i></h3>
                     <h3 class="red"></h3>
-                    <h2 class="white">Best Bet For Your Buck!</h2>
+                    <h2 class="white">Quality service at afforadable prices!</h2>
                 </div>
             </div>
             <div class="sec2Div2" style="padding: 20px;">
@@ -147,63 +94,62 @@ if(isset($_POST['submit'])){
             </div>
         </div>
     </section>
-    <div class="titleBox"><h1>DON’T TAKE <span style="color: #0eb448;">OUR WORD</span> FOR IT</h1></div>
+    <div class="titleBox"><h1>SEE WHAT OUR <span style="color: #0eb448;">CUSTOMERS</span> HAVE TO SAY.</h1></div>
     <section class="interiorFaq2">
+        
         <div class="reviewCarousel">
             <div class="slideshow-container" style="max-width: 800px;">
 
                 <div class="zmySlides fade">
                       <div style="margin-top: 10vh; text-align: center;">
-                          <p>We were very happy with the painting work that Vividcoat Painting did in our home. They were very polite and professional and the work was done quickly, neatly and at a fair price. We would definitely use their services again.</p>
+                          <p>Euro Top was great! They were available on short notice and were extremely efficient while still providing high quality work. My 1 bedroom apartment was painted in half a day, with ceiling cracks patched up. Looks bright and fresh. Thanks!</p>
                       </div>
-                      <h4 style="font-weight: 600;text-align: center;">Jessica <span style="color: #0eb448;">|</span> Pickering, ON</h4>
+                      <h4 style="font-weight: 600;text-align: center;">Steve <span style="color: #0eb448;">|</span> Torronto, ON</h4>
                       
                 </div>
                 
                 <div class="zmySlides fade">
                     <div style=" text-align: center;">
-                        <p style="margin-top: 20%;">These two brothers are good painters. They do their jobs and are willing to take extra steps to please. I thought that our front steps simply needed a new paint job but Vissar showed me that there was more than repainting needed here due to water damage. The job would require major prep prior to repainting. I am more than pleased with his work.
-                            Tony painted the outside windows at the back of the house and fixed up cracking drywall in the downstairs entrance and chipped ceiling paint in bathroom. He did an excellent job.
-                            </p>
+                        <p>Euro Top Painting did an amazing job on our home. It took a lot of work to restore the trim and paint the siding. They worked efficiently, were clean and thorough. We will definitely hire them again when it's time to paint the interior of our home.</p>
                     </div>
-                    <h4 style="font-weight: 600;text-align: center;">Margot Levitt <span style="color: #0eb448;">|</span> Toronto, ON</h4>
+                    <h4 style="font-weight: 600;text-align: center;">Jennifer in <span style="color: #0eb448;">|</span> Toronto, ON</h4>
                 </div>
                 
                 <div class="zmySlides fade">
                     <div style="margin-top: 10vh; text-align: center;">
-                        <p>Great service. VividCoat Painting were amazing to work with. They were efficient, prompt, and very hardworking. Our home looks beautiful and much bigger after the fresh coat of paint.</p>
+                        <p>I had a great experience with this company. They are very professional and friendly. They worked very hard every day at my home. Always paying attention to details. I'm so happy and impressed with the results I got. My home feels like a new home now. I highly recommend them. Thank you Visar.</p>
                     </div>
-                    <h4 style="font-weight: 600;text-align: center;">Shirley <span style="color: #0eb448;">|</span> Toronto, ON</h4>
+                    <h4 style="font-weight: 600;text-align: center;">Brian <span style="color: #0eb448;">|</span> Toronto, ON</h4>
                 </div>
                 <div class="zmySlides fade">
                     <div style="margin-top: 10vh; text-align: center;">
-                        <p>A pleasure to deal with. Two brothers who do their own work and applied 2 coats of Benjamin Moore paint. Our home is stucco and they did a really good job of everything - windows, doors and walls. It looks beautiful!</p>
+                        <p>Visar painted the exterior of my house, posts, window trim and my bathroom ceiling. He arrived on time, provided suggestions when needed and completed the job in a timely manner. Visar cares about the work that he does. He recommends the correct type of paint and does a neat and professional job. I would use Euro Top painters again and I would highly recommend them to others.</p>
                     </div>
                     <h4 style="font-weight: 600;text-align: center;">David <span style="color: #0eb448;">|</span> Toronto, ON</h4>
                 </div>
                 <div class="zmySlides fade">
                     <div style="margin-top: 10vh; text-align: center;">
-                        <p>What a terrific team. They were on time they were meticulous and clean. Their work was fast and surprisingly extremely well done. Good guys to work with and especially during this challenging time with COVID-19 they prepared everything perfectly. I would highly recommend them again and again.</p>
+                        <p>Visar painted my house basement rooms living kitchen and we are very happy they are very professional did amazing work very detailed work reasonably prize. I definitely we will use them again thank you Visar</p>
                     </div>
-                    <h4 style="font-weight: 600;text-align: center;">Mike <span style="color: #0eb448;">|</span> Oakville, ON</h4>
+                    <h4 style="font-weight: 600;text-align: center;">b_tofaj <span style="color: #0eb448;">|</span> Oakville, ON</h4>
                 </div>
                 <div class="zmySlides fade">
                     <div style="margin-top: 10vh; text-align: center;">
-                        <p>Excellent job. Job was executed as planned with outstanding quality and very competitive quote. Very professional and reliable. I highly recommend this company.</p>
+                        <p>Visar and his crew were referred to us by our friend. They were extremely quick and professional they did amazing job my livingroom and bedroom's look better than I thought. Visar and his crew highly recommended and I will use them again in the future. Thanks Burim</p>
                     </div>
-                    <h4 style="font-weight: 600;text-align: center;">Eliana <span style="color: #0eb448;">|</span> Toronto, ON</h4>
+                    <h4 style="font-weight: 600;text-align: center;">Buci Selimi <span style="color: #0eb448;">|</span> Toronto, ON</h4>
                 </div>
                 <div class="zmySlides fade">
                     <div style="margin-top: 10vh; text-align: center;">
-                        <p>From the quote to the final day of painting, the company was responsive and did what they said they would. Their quote was competitive and the work done is excellent. I would highly recommend this company for any paint job.</p>
+                        <p>I had the inside of my house painted by this company, March 2nd 2020.Two painters Tony and Visar was on time and did a little extra at no cost.They moved the furniture and covered up everything with a plastic sheet,They are fast workers and clean cut lines where the walls meet the ceiling.They made sure that every fault on the drywall was filled and fixed since the builder did not do a good job in the first place.I would certainly recommend this company, reliability and excellent work.</p>
                     </div>
-                    <h4 style="font-weight: 600;text-align: center;">Sarah <span style="color: #0eb448;">|</span> Toronto, ON</h4>
+                    <h4 style="font-weight: 600;text-align: center;">Ragin R. <span style="color: #0eb448;">|</span> Toronto, ON</h4>
                 </div>
                 <div class="zmySlides fade">
                     <div style="margin-top: 10vh; text-align: center;">
-                        <p>Quite simply, Visar and Tony showed up exactly when they said they would, they worked without wasting time and also finished up when they said they would. They are hard working and professional, obviously serious about doing a good job. I highly recommend them.</p>
+                        <p>I used euro top painting to do painting in one of the houses and he did a great job very professional and I would highly recommend them and use there service again in the future thanks for your hard work</p>
                     </div>
-                    <h4 style="font-weight: 600;text-align: center;">Colin<span style="color: #0eb448;">|</span> Toronto, ON</h4>
+                    <h4 style="font-weight: 600;text-align: center;">Tony Gilaon<span style="color: #0eb448;">|</span> Toronto, ON</h4>
                 </div>
                 </div>
                 <br>
@@ -227,26 +173,28 @@ if(isset($_POST['submit'])){
         <h1 style="font-size: 30px;"><span style="color: #0eb448;">Recent</span> Highlights</h1>
         <div class="row">
             <div class="column">
-              <img class="galImg" loading="lazy" src="images/commercial/1.jpg">
-              <img class="galImg" loading="lazy" src="images/commercial/2.jpeg">
-              <img class="galImg" loading="lazy" src="images/commercial/3.jpg">
+              <img class="galImg" loading="lazy" src="images/interior/bathroom.jpg">
+              <img class="galImg" loading="lazy" src="images/interior/1583075443219-JPEG_20200301_100953_full_medium.jpg">
+              <img class="galImg" loading="lazy" src="images/interior/redWall.jpg">
               
             </div>
             <div class="column">
-                <img class="galImg" loading="lazy" src="images/exterior/decks/IMG-20200918-WA0002.jpg">
-                <img class="galImg" loading="lazy" src="images/interior/Gallery/1.jpg">
-                <img class="galImg" loading="lazy" src="images/commercial/6.jpeg">
+                <img class="galImg" loading="lazy" src="images/commercial/25.jpg">
+                <img class="galImg" loading="lazy" src="images/commercial/2.jpg">
+                <img class="galImg" loading="lazy" src="images/commercial/8.jpg">
             </div>
             <div class="column">
-                <img class="galImg" loading="lazy" src="images/commercial/7.jpg">
-                <img class="galImg" loading="lazy" src="images/exterior/decks/mobile.jpg">
-                <img class="galImg" loading="lazy" src="images/commercial/9.jpg">
+                <img class="galImg" loading="lazy" src="images/exterior/backOfHome.jpg">
+                <img class="galImg" loading="lazy" src="images/exterior/decks/gazebo.jpg">
+                <img class="galImg" loading="lazy" src="images/exterior/main.jpg">
+                <img class="galImg" loading="lazy" src="images/exterior/poolShot.jpg">
                 
             </div>
             <div class="column">
-                <img class="galImg" loading="lazy" src="images/interior/livingRoom.jpg">
-                <img class="galImg" loading="lazy" src="images/exterior/JPEG_20200513_113245_full_medium.jpg">
-                <img class="galImg" loading="lazy" src="images/interior/vivid_1_medium.jpg">
+                <img class="galImg" loading="lazy" src="images/interior/ceilings/1.jpg">
+                <img class="galImg" loading="lazy" src="images/interior/ceilings/17.jpg">
+                <img class="galImg" loading="lazy" src="images/interior/ceilings/9.jpg">
+                <img class="galImg" loading="lazy" src="images/interior/Gallery/20.jpg">
             </div>
           </div>
           <div class="slideshowContainer">
@@ -254,113 +202,70 @@ if(isset($_POST['submit'])){
 
                 <!-- Full-width images with number and caption text -->
                 <div class="mySlides fade">
-                    <img class="galImg" loading="lazy" src="images/commercial/1.jpg" width="100%">
+                    <img class="galImg" loading="lazy" src="images/interior/bathroom.jpg" width="100%">
                     <div class="text"></div>
                 </div>
                 
                 <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/commercial/2.jpeg" width="100%">
+                  <img class="galImg" loading="lazy" src="images/interior/1583075443219-JPEG_20200301_100953_full_medium.jpg" width="100%">
                   <div class="text"></div>
                 </div>
               
                 <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/commercial/3.jpg" width="100%">
+                  <img class="galImg" loading="lazy" src="images/interior/redWall.jpg" width="100%">
                   <div class="text"></div>
                 </div>
                 <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/commercial/4.jpeg" width="100%">
-                  <div class="text"></div>
-                </div>
-              
-                <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/commercial/5.jpeg" width="100%">
+                  <img class="galImg" loading="lazy" src="images/commercial/25.jpg" width="100%">
                   <div class="text"></div>
                 </div>
               
                 <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/commercial/6.jpeg" width="100%">
+                  <img class="galImg" loading="lazy" src="images/commercial/2.jpg" width="100%">
+                  <div class="text"></div>
+                </div>
+              
+                <div class="mySlides fade">
+                  <img class="galImg" loading="lazy" src="images/commercial/8.jpg" width="100%">
                   <div class="text"></div>
                 </div>
                 <div class="mySlides fade">
-                    <img class="galImg" loading="lazy" src="images/commercial/7.jpg" width="100%">
+                    <img class="galImg" loading="lazy" src="images/exterior/backOfHome.jpg" width="100%">
                     <div class="text"></div>
                 </div>
               
                 <div class="mySlides fade">
-                    <img class="galImg" loading="lazy" src="images/commercial/8.jpg" width="100%">
+                    <img class="galImg" loading="lazy" src="images/exterior/decks/gazebo.jpg" width="100%">
                     <div class="text"></div>
                 </div>
               
                 <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/commercial/9.jpg" width="100%">
+                  <img class="galImg" loading="lazy" src="images/exterior/main.jpg" width="100%">
                   <div class="text"></div>
                 </div>
                 <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/commercial/10.jpg" width="100%">
+                  <img class="galImg" loading="lazy" src="images/exterior/poolShot.jpg" width="100%">
                   <div class="text"></div>
                 </div>
               
                 <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/commercial/11.jpg" width="100%">
+                  <img class="galImg" loading="lazy" src="images/interior/ceilings/1.jpg" width="100%">
                   <div class="text"></div>
                 </div>
               
                 <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/commercial/12.jpg" width="100%">
+                  <img class="galImg" loading="lazy" src="images/interior/ceilings/17.jpg" width="100%">
                   <div class="text"></div>
                 </div>
                 <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/commercial/13.jpg" width="100%">
+                  <img class="galImg" loading="lazy" src="images/interior/ceilings/9.jpg" width="100%">
                   <div class="text"></div>
                 </div>
                 <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/commercial/14.jpg" width="100%">
+                  <img class="galImg" loading="lazy" src="images/interior/Gallery/20.jpg" width="100%">
                   <div class="text"></div>
                 </div>
-                <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/commercial/15.jpg" width="100%">
-                  <div class="text"></div>
-                </div>
-                <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/commercial/16.jpg" width="100%">
-                  <div class="text"></div>
-                </div>
-                <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/commercial/17.jpg" width="100%">
-                  <div class="text"></div>
-                </div>
-                <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/commercial/18.jpg" width="100%">
-                  <div class="text"></div>
-                </div>
-                <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/commercial/19.jpg" width="100%">
-                  <div class="text"></div>
-                </div>
-                <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/commercial/20.jpg" width="100%">
-                  <div class="text"></div>
-                </div>
-                <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/commercial/22.jpg" width="100%">
-                  <div class="text"></div>
-                </div>
-                <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/commercial/23.jpg" width="100%">
-                  <div class="text"></div>
-                </div>
-                <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/commercial/24.jpg" width="100%">
-                  <div class="text"></div>
-                </div>
-                <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/commercial/main.jpg" width="100%">
-                  <div class="text"></div>
-                </div>
-                <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/commercial/up.jpg" width="100%">
-                  <div class="text"></div>
-                </div>
+                
                 
               
                 <!-- Next and previous buttons -->
@@ -383,17 +288,6 @@ if(isset($_POST['submit'])){
                 <span class="dot" onclick="currentSlide(11)"></span>
                 <span class="dot" onclick="currentSlide(13)"></span>
                 <span class="dot" onclick="currentSlide(14)"></span>
-                <span class="dot" onclick="currentSlide(15)"></span>
-                <span class="dot" onclick="currentSlide(16)"></span>
-                <span class="dot" onclick="currentSlide(17)"></span>
-                <span class="dot" onclick="currentSlide(18)"></span>
-                <span class="dot" onclick="currentSlide(19)"></span>
-                <span class="dot" onclick="currentSlide(20)"></span>
-                <span class="dot" onclick="currentSlide(21)"></span>
-                <span class="dot" onclick="currentSlide(22)"></span>
-                <span class="dot" onclick="currentSlide(23)"></span>
-                <span class="dot" onclick="currentSlide(24)"></span>
-                <span class="dot" onclick="currentSlide(25)"></span>
               </div>
           </div>
           <br>
@@ -409,22 +303,22 @@ if(isset($_POST['submit'])){
     </section>
     <section id="section5">
         <h1 style="font-size: 30px;">Why choose <span style="color: #0eb448;">us?</span></h1>
-        <h3>VividCoat Painting sets the highest standard in service and customer satisfaction.</h3>
+        <h3>Euro Top Painting sets the highest standard in service and customer satisfaction.</h3>
         <div style="height: 3px; background-color: #47b76f; width: inherit; margin: 0 25vw;"></div>
         <br>
         <br>
         <div id="section5Divs">
             <div>
                 <h3>100% <span style="color: #0eb448;">Satisfaction</span> Gurantee</h3>
-                <img loading="lazy" src="images/100Sat.png" alt="VividCoat Painting LTD 100% Satisfatcion gurantee" style="max-width: 33%;">
+                <img loading="lazy" src="images/100Sat.png" alt="Euro Top Painting LTD 100% Satisfatcion gurantee" style="max-width: 33%;">
             </div>
             <div>
                 <h3>Unmatched <span style="color: #0eb448;">2-year</span> Quality Warranty</h3>
-                <img loading="lazy" src="images/2yeargur.png" alt="VividCoat Painting LTD 2 year gurantee" style="max-width: 33%;">
+                <img loading="lazy" src="images/2yeargur.png" alt="Euro Top Painting LTD 2 year gurantee" style="max-width: 33%;">
             </div>
             <div>
                 <h3><span style="color: #0eb448;">30-Years </span>experience</h3>
-                    <img loading="lazy" src="images/30inBus.png" alt="VividCoat Painting LTD 30 years in business" style="max-width: 33%;">
+                    <img loading="lazy" src="images/30inBus.png" alt="Euro Top Painting LTD 30 years in business" style="max-width: 33%;">
             </div>
             
         </div>
@@ -432,13 +326,17 @@ if(isset($_POST['submit'])){
     <div class="titleBox"><h1>Get started in <span style="color: #0eb448;">three</span> easy steps!</h1></div>
     <section id="section3">
         <div>
-            <h1 style="font-size: 30px;color: #0eb448;">#1</h1>
+            <div style="text-align: center;">
+                <h1 style="font-size: 30px;color: #0eb448; width:45px; height:45px; border-radius:50%;box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15); margin:auto; padding: 20px;">#1</h1>
+            </div>
             <h2>Get A Free Estimate</h2>
             <p>We start the interior painting process by understanding more about your needs. When you call or email in you can expect a friendly customer service representative to help you with your estimate. From there, you will be paired with an insured and licensed contractor to help you with your needs. 
             </p>
         </div>
         <div>
-            <h1 style="font-size: 30px;color: #0eb448;">#2</h1>
+        <div style="text-align: center;">
+                <h1 style="font-size: 30px;color: #0eb448; width:45px; height:45px; border-radius:50%;box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15); margin:auto; padding: 20px;">#2</h1>
+            </div>
             <h2>Property inspection</h2>
             <p>
                 After you speak with a representative, we then schedule a time and a date to visit the property. From here, we complete a property inspection to learn more about your project. Here you will find a professional estimate written out to you on a clipboard from a friendly expert in our companies apparel.
@@ -446,7 +344,9 @@ if(isset($_POST['submit'])){
             </p>
         </div>
         <div>
-            <h1 style="font-size: 30px;color: #0eb448;">#3</h1>
+        <div style="text-align: center;">
+                <h1 style="font-size: 30px;color: #0eb448; width:45px; height:45px; border-radius:50%;box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15); margin:auto; padding: 20px;">#3</h1>
+            </div>
             <h2>Painting & Quality Check</h2>
             <p>Finally, we start the project and update you as we move on. After the paitning is finished we will do a quality check and make sure that you are 100% satisified with our
                 work. We do not consider the project finshed until you are happy with the results.
@@ -461,25 +361,6 @@ if(isset($_POST['submit'])){
             </div>
             <div>
                 <a href="contact.php">Schedule Now!</a>
-            </div>
-        </div>
-    </section>
-    <section id="section8">
-        <div class="column3">
-            <div class="sec8Divs">
-                <div><i class="fas fa-map-marked-alt"></i></div>
-                <div><h4>VividCoat Painting LTD</h4>
-                    <h4>Ontario, Canada</h4></div> 
-            </div>
-            <div class="sec8Divs">
-                <div style="margin: 0 10px 10px 0;"><i class="far fa-envelope"></i></div>
-                <div><h4>Our Email</h4>
-                    <h4>VividCoatPainting@hotmail.com</h4></div> 
-            </div>
-            <div class="sec8Divs">
-                <div><i class="fas fa-mobile"></i></div>
-                <div><h4>Call Us For An Estimate</h4>
-                    <h4>416-566-1322</h4></div> 
             </div>
         </div>
     </section>

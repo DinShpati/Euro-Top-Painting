@@ -1,48 +1,4 @@
-<?php
-
-require "vendor/autoload.php";
-
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-$mailer = new PHPMailer();
-if(isset($_POST['submit'])){
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $desc = $_POST['desc'];
-    $date = $_POST['date'];
-    
-    try {
-        $mailer->isSMTP();
-
-
-        $mailer->Host = 'smtp.hostinger.com';
-        $mailer->SMTPAuth = true;
-        $mailer->Username = 'estimates@vividcoatpainting.com';
-        $mailer->Password = 'Z3tT57cW_$_!_*';
-        $mailer->SMTPSecure = 'tls';
-        $mailer->Port = 587;
-        $mailer-> SMTPAuth = true;
-
-
-        $mailer->setFrom('estimates@vividcoatpainting.com', 'Estimate');
-        $mailer->addAddress('vividcoatpainting@gmail.com', 'Veton Ramadani');
-
-        $mailer->isHTML(false);
-        $mailer->Subject = ($name . " is asking for a estimate");
-        $mailer->Body = ("$desc . \n\n . Desired Start Date:  . $date . \n\n . Customer Number: . $phone . \n . Customer Email - Click Here to reply: . $email");
-
-        $mailer->send();
-        $mailer->ClearAllRecipients();
-        echo "<script>alert('Your message was recieved, we will get back to you shortly');</script>";
-    }catch (Exception $e) {
-        echo "<script>alert('Your message was not recieved please try calling or emailing us');</script>";
-    }
-}
-
-?>
+<?php include('emailSender.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,38 +7,29 @@ if(isset($_POST['submit'])){
     <link rel="apple-touch-icon" sizes="180x180" href="images/icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/icon.png">
-    <meta content="VividCoat Painting LTD" property=og:title>
-    <meta content="VividCoat Painting LTD - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Vividcoatpaintintg ltd. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee."
+    <meta content="Euro Top Painting - The best painting company in Toronto, CA!" property=og:title>
+    <meta content="Euro Top Painting - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Euro Top Painting ltd. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee."
           property=og:description>
-    <meta content=vividcoat.com property=og:url>
+    <meta content=EuroTopPainting.com property=og:url>
     <meta content=website property=og:type>
     <meta content=images/icon.png property=og:image>
     <meta content=summary_large_image property=twitter:card>
     <meta name="description"
-          content="VividCoat Painting LTD - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Vividcoatpaintintg ltd. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee.">
+          content="Euro Top Painting - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Euro Top Painting ltd. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee.">
     <meta property="og:image" content="images/main.jpg">
-    <title>VividCoat Painting LTD - About us</title>
+    <title>Euro Top Painting - The best painting company in Toronto, CA!</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="CSS/reset.css">
-    <link rel="stylesheet" href="CSS/a.css">
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/939c3b7b3f.js" crossorigin="anonymous"></script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179197814-1">
-        </script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'UA-179197814-1');
-        </script>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
 
 </head>
 <body>
@@ -90,16 +37,16 @@ if(isset($_POST['submit'])){
 <?php include("header.php"); ?> 
 
 
-    <section id="section1" style="background-image: url(./images/exterior/backside2.jpg);">
+    <section id="section1" style="background-image: url(./images/exterior/backOfHome.jpg);">
         <div class="darkBG" style="background-color: rgba(170, 137, 94, 0.404);">
             <div class="anotherOne" >
                 <h1 class="bigText">About Us</h1>
-                <h2 class="midText">FEEL SECURE WITH A UNMATCHED QUALITY GUARANTEE BACKED BY A 30 YEAR OLD COMPANY!</h2>
+                <h2 class="midText">Euro Top Painting</h2>
                 <div class="sectionOneBadges">
-                    <div> <img src="images/homestars.png" alt="VividCoat painting - homestars verified"> </div>
-                    <div> <img src="images/30YearsInBussiness.png" alt="VividCoat painting - homestars verified"> </div>
-                    <div><img src="images/warranty (1).png" alt="VividCoat painting - homestars verified"></div>
-                    <div><img src="images/Homestars-best-of-2020-2.png" alt="VividCoat painting - homestars verified"></div>
+                    <div> <img src="images/homestars.png" alt="Euro Top painting - homestars verified"> </div>
+                    <div> <img src="images/30YearsInBussiness.png" alt="Euro Top painting - homestars verified"> </div>
+                    <div><img src="images/warranty (1).png" alt="Euro Top painting - homestars verified"></div>
+                    <div><img src="images/Homestars-best-of-2020-2.png" alt="Euro Top painting - homestars verified"></div>
                 </div>
             </div>
         </div>
@@ -110,16 +57,9 @@ if(isset($_POST['submit'])){
                 <h1 style="font-size: 30px;" class="white">About Us</h1>
                 <hr>
                 <div class="ratDiv">
-                    <p style="color: white;">VividCoat Painting was founded back in 1999 with one goal in mind: To provide quality painting services at an affordable price. VividCoat Painting has been active ever since and is up to date with the latest designs and trends for your home. To make our customers feel comfortable and guaranteed we offer a 2-year unmatched quality warranty on all of our services. This means that our customers never have to worry about quality because they know it's our top priority. </p>
+                    <p style="color: white;">Euro Top Painting has earned a strong reputation for high-quality work for our clients. Our painters are trained in the latest painting techniques,  safety standards and work seamlessly in your project to meet scheduling needs. We work with our clients to provide accurate proposals, detailed recommendations and outstanding attention to detail as well as offer guidance for proper care and maintenance to maximize long-lasting results. Euro Top Painting specializes in professional painting for  Residential Owners, General Contractors, Property Managers, Homeowners Associations and Building Owners. We provide high-quality painting solutions to meet the unique requirements of any project. Our team will deliver timely, professional and accurate results to fit the needs of your budget for assignments of any scale.</p>
                 </div>
                 <hr>
-                <div class="ratDiv">
-                    <p style="color: white;">For us, it's all about the quality of the services that we provide to our customers. We strive to provide top-notch services and satisfaction to our customers and won't consider your project complete until you are satisfied with our work. Call or Email us now to get a free estimate on your property. We provide the best prices in the Ontario area. </p>
-                </div>
-                <hr>
-                <div class="ratDiv">
-                    
-                </div>
             </div>
             <div class="sec2Div2">
                 <h1 class="paintingIcon"><i class="fas fa-paint-roller"></i></h1>
@@ -156,22 +96,22 @@ if(isset($_POST['submit'])){
 
     <section id="section5">
         <h1 style="font-size: 30px;">Why choose <span style="color: #0eb448;">us?</span></h1>
-        <h3>VividCoat Painting sets the highest standard in service and customer satisfaction.</h3>
+        <h3>Euro Top Painting sets the highest standard in service and customer satisfaction.</h3>
         <div style="height: 3px; background-color: #47b76f; width: inherit; margin: 0 25vw;"></div>
         <br>
         <br>
         <div id="section5Divs">
             <div>
                 <h3>100% <span style="color: #0eb448;">Satisfaction</span> Gurantee</h3>
-                <img loading="lazy" src="images/100Sat.png" alt="VividCoat Painting LTD 100% Satisfatcion gurantee" style="max-width: 33%;">
+                <img loading="lazy" src="images/100Sat.png" alt="Euro Top Painting LTD 100% Satisfatcion gurantee" style="max-width: 33%;">
             </div>
             <div>
                 <h3>Unmatched <span style="color: #0eb448;">2-year</span> Quality Warranty</h3>
-                <img loading="lazy" src="images/2yeargur.png" alt="VividCoat Painting LTD 2 year gurantee" style="max-width: 33%;">
+                <img loading="lazy" src="images/2yeargur.png" alt="Euro Top Painting LTD 2 year gurantee" style="max-width: 33%;">
             </div>
             <div>
                 <h3><span style="color: #0eb448;">30-Years </span>experience</h3>
-                    <img loading="lazy" src="images/30inBus.png" alt="VividCoat Painting LTD 30 years in business" style="max-width: 33%;">
+                    <img loading="lazy" src="images/30inBus.png" alt="Euro Top Painting LTD 30 years in business" style="max-width: 33%;">
             </div>
             
         </div>
@@ -185,25 +125,6 @@ if(isset($_POST['submit'])){
             </div>
             <div>
                 <a href="contact.php">Schedule Now!</a>
-            </div>
-        </div>
-    </section>
-    <section id="section8">
-        <div class="column3">
-            <div class="sec8Divs">
-                <div><i class="fas fa-map-marked-alt"></i></div>
-                <div><h4>VividCoat Painting LTD</h4>
-                    <h4>Ontario, Canada</h4></div> 
-            </div>
-            <div class="sec8Divs">
-                <div style="margin: 0 10px 10px 0;"><i class="far fa-envelope"></i></div>
-                <div><h4>Our Email</h4>
-                    <h4>VividCoatPainting@hotmail.com</h4></div> 
-            </div>
-            <div class="sec8Divs">
-                <div><i class="fas fa-mobile"></i></div>
-                <div><h4>Call Us For An Estimate</h4>
-                    <h4>416-566-1322</h4></div> 
             </div>
         </div>
     </section>

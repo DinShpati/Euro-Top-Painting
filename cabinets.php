@@ -1,48 +1,4 @@
-<?php
-
-require "vendor/autoload.php";
-
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-$mailer = new PHPMailer();
-if(isset($_POST['submit'])){
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $desc = $_POST['desc'];
-    $date = $_POST['date'];
-    
-    try {
-        $mailer->isSMTP();
-
-
-        $mailer->Host = 'smtp.hostinger.com';
-        $mailer->SMTPAuth = true;
-        $mailer->Username = 'estimates@vividcoatpainting.com';
-        $mailer->Password = 'Z3tT57cW_$_!_*';
-        $mailer->SMTPSecure = 'tls';
-        $mailer->Port = 587;
-        $mailer-> SMTPAuth = true;
-
-
-        $mailer->setFrom('estimates@vividcoatpainting.com', 'Estimate');
-        $mailer->addAddress('vividcoatpainting@gmail.com', 'Veton Ramadani');
-
-        $mailer->isHTML(false);
-        $mailer->Subject = ($name . " is asking for a estimate");
-        $mailer->Body = ("$desc . \n\n . Desired Start Date:  . $date . \n\n . Customer Number: . $phone . \n . Customer Email - Click Here to reply: . $email");
-
-        $mailer->send();
-        $mailer->ClearAllRecipients();
-        echo "<script>alert('Your message was recieved, we will get back to you shortly');</script>";
-    }catch (Exception $e) {
-        echo "<script>alert('Your message was not recieved please try calling or emailing us');</script>";
-    }
-}
-
-?>
+<?php include('emailSender.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,38 +7,29 @@ if(isset($_POST['submit'])){
     <link rel="apple-touch-icon" sizes="180x180" href="images/icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/icon.png">
-    <meta content="VividCoat Painting LTD" property=og:title>
-    <meta content="VividCoat Painting LTD - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Vividcoatpaintintg ltd. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee."
+    <meta content="Euro Top Painting - The best painting company in Toronto, CA!" property=og:title>
+    <meta content="Euro Top Painting - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Euro Top Painting ltd. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee."
           property=og:description>
-    <meta content=vividcoat.com property=og:url>
+    <meta content=EuroTopPainting.com property=og:url>
     <meta content=website property=og:type>
     <meta content=images/icon.png property=og:image>
     <meta content=summary_large_image property=twitter:card>
     <meta name="description"
-          content="VividCoat Painting LTD - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Vividcoatpaintintg ltd. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee.">
+          content="Euro Top Painting - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Euro Top Painting ltd. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee.">
     <meta property="og:image" content="images/main.jpg">
-    <title>VividCoat Painting LTD - #1 Cabinet painters in Southern Ontario, Toronto</title>
+    <title>Euro Top Painting - The best painting company in Toronto, CA!</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="CSS/reset.css">
-    <link rel="stylesheet" href="CSS/m.css">
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/939c3b7b3f.js" crossorigin="anonymous"></script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179197814-1">
-        </script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'UA-179197814-1');
-        </script>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
 
 </head>
 <body>
@@ -93,12 +40,12 @@ if(isset($_POST['submit'])){
         <div class="darkBG" style="background-color: rgba(39, 30, 19, 0.404);">
             <div class="anotherOne" >
                 <h1 class="bigText">Cabinet Painting Services</h1>
-                <h2 class="midText">Quality painting done right</h2>
+                <h2 class="midText">Painting at it's finest</h2>
                 <div class="sectionOneBadges">
-                    <div> <img src="images/homestars.png" alt="VividCoat painting - homestars verified"> </div>
-                    <div> <img src="images/30YearsInBussiness.png" alt="VividCoat painting - homestars verified"> </div>
-                    <div><img src="images/warranty (1).png" alt="VividCoat painting - homestars verified"></div>
-                    <div><img src="images/Homestars-best-of-2020-2.png" alt="VividCoat painting - homestars verified"></div>
+                    <div> <img src="images/homestars.png" alt="Euro Top painting - homestars verified"> </div>
+                    <div> <img src="images/30YearsInBussiness.png" alt="Euro Top painting - homestars verified"> </div>
+                    <div><img src="images/warranty (1).png" alt="Euro Top painting - homestars verified"></div>
+                    <div><img src="images/Homestars-best-of-2020-2.png" alt="Euro Top painting - homestars verified"></div>
                 </div>
             </div>
         </div>
@@ -109,11 +56,11 @@ if(isset($_POST['submit'])){
                 <h1 style="font-size: 30px;" class="white">Cabinet Painting Contractors</h1>
                 <hr>
                 <div class="ratDiv">
-                    <p style="color: white;">Renovating your kitchen cabinets is time-consuming and complicated. But hiring VividCoat Paitning makes cabinet painting a breeze. Our color consultants can help you choose the best color or the type of finish you want. To get started, you just need to tell us a bit about your cabinets and what you want. You will get a free quote and before you know it, professional painters will be painting.</p>
+                    <p style="color: white;">Renovating your kitchen cabinets is time-consuming and complicated. But hiring Euro Top Paitning makes cabinet painting a breeze. Our color consultants can help you choose the best color or the type of finish you want. To get started, you just need to tell us a bit about your cabinets and what you want. You will get a free quote and before you know it, professional painters will be painting.</p>
                 </div>
                 <hr>
                 <div class="ratDiv">
-                    <p style="color: white;">VividCoat Painting's painting contractors are experienced in cabinet painting. They can simply repaint doors and use a durable finish on your kitchen cabinets! Our house painters will come to your house with all the necessary materials. Whatever your desired look, Paintzen can deliver. Our service is backed by a 100% Customer Satisfaction Guarantee.</p>
+                    <p style="color: white;">Euro Top Painting's painting contractors are experienced in cabinet painting. They can simply repaint doors and use a durable finish on your kitchen cabinets! Our house painters will come to your house with all the necessary materials. Whatever your desired look, Paintzen can deliver. Our service is backed by a 100% Customer Satisfaction Guarantee.</p>
                 </div>
                 <hr>
                 <div class="ratDiv">
@@ -143,13 +90,17 @@ if(isset($_POST['submit'])){
     <div class="titleBox"><h1>Get started in <span style="color: #0eb448;">three</span> easy steps!</h1></div>
     <section id="section3">
         <div>
-            <h1 style="font-size: 30px;color: #0eb448;">#1</h1>
+            <div style="text-align: center;">
+                <h1 style="font-size: 30px;color: #0eb448; width:45px; height:45px; border-radius:50%;box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15); margin:auto; padding: 20px;">#1</h1>
+            </div>
             <h2>Get A Free Estimate</h2>
             <p>We start the interior painting process by understanding more about your needs. When you call or email in you can expect a friendly customer service representative to help you with your estimate. From there, you will be paired with an insured and licensed contractor to help you with your needs. 
             </p>
         </div>
         <div>
-            <h1 style="font-size: 30px;color: #0eb448;">#2</h1>
+        <div style="text-align: center;">
+                <h1 style="font-size: 30px;color: #0eb448; width:45px; height:45px; border-radius:50%;box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15); margin:auto; padding: 20px;">#2</h1>
+            </div>
             <h2>Property inspection</h2>
             <p>
                 After you speak with a representative, we then schedule a time and a date to visit the property. From here, we complete a property inspection to learn more about your project. Here you will find a professional estimate written out to you on a clipboard from a friendly expert in our companies apparel.
@@ -157,7 +108,9 @@ if(isset($_POST['submit'])){
             </p>
         </div>
         <div>
-            <h1 style="font-size: 30px;color: #0eb448;">#3</h1>
+        <div style="text-align: center;">
+                <h1 style="font-size: 30px;color: #0eb448; width:45px; height:45px; border-radius:50%;box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15); margin:auto; padding: 20px;">#3</h1>
+            </div>
             <h2>Painting & Quality Check</h2>
             <p>Finally, we start the project and update you as we move on. After the paitning is finished we will do a quality check and make sure that you are 100% satisified with our
                 work. We do not consider the project finshed until you are happy with the results.
@@ -178,22 +131,22 @@ if(isset($_POST['submit'])){
 
     <section id="section5">
         <h1 style="font-size: 30px;">Why choose <span style="color: #0eb448;">us?</span></h1>
-        <h3>VividCoat Painting sets the highest standard in service and customer satisfaction.</h3>
+        <h3>Euro Top Painting sets the highest standard in service and customer satisfaction.</h3>
         <div style="height: 3px; background-color: #47b76f; width: inherit; margin: 0 25vw;"></div>
         <br>
         <br>
         <div id="section5Divs">
             <div>
                 <h3>100% <span style="color: #0eb448;">Satisfaction</span> Gurantee</h3>
-                <img loading="lazy" src="images/100Sat.png" alt="VividCoat Painting LTD 100% Satisfatcion gurantee" style="max-width: 33%;">
+                <img loading="lazy" src="images/100Sat.png" alt="Euro Top Painting LTD 100% Satisfatcion gurantee" style="max-width: 33%;">
             </div>
             <div>
                 <h3>Unmatched <span style="color: #0eb448;">2-year</span> Quality Warranty</h3>
-                <img loading="lazy" src="images/2yeargur.png" alt="VividCoat Painting LTD 2 year gurantee" style="max-width: 33%;">
+                <img loading="lazy" src="images/2yeargur.png" alt="Euro Top Painting LTD 2 year gurantee" style="max-width: 33%;">
             </div>
             <div>
                 <h3><span style="color: #0eb448;">30-Years </span>experience</h3>
-                    <img loading="lazy" src="images/30inBus.png" alt="VividCoat Painting LTD 30 years in business" style="max-width: 33%;">
+                    <img loading="lazy" src="images/30inBus.png" alt="Euro Top Painting LTD 30 years in business" style="max-width: 33%;">
             </div>
             
         </div>
@@ -201,7 +154,7 @@ if(isset($_POST['submit'])){
     <section id="servicesCabinets">
         <div class="blur">
             <h1 style="font-size: 30px;color: white;">Cabinet Paitning <span style="color: #0eb448;">Services</span></h1>
-            <h3 style="color: white;">No matter what type of room or surface you are looking to paint, VividCoat Painting is there to help.</h3>
+            <h3 style="color: white;">No matter what type of room or surface you are looking to paint, Euro Top Painting is there to help.</h3>
             <div style="height: 3px; background-color: #47b76f; width: inherit; margin: 0 25vw;"></div>
             <br>
             <br>
@@ -254,7 +207,7 @@ if(isset($_POST['submit'])){
                 <h1 style="margin:0;color: #0eb448; font-size: 90px;"><i class="fas fa-wallet"></i></h1>
                 <h1 style="font-size: 30px;">Benefits of Cabinet Refinishing</h1>
                 <ul style="list-style: disc;margin: 0 10vw;">
-                    <li class="cabinetLI">Many homeowners put off a new look in their kitchen because of the high cost associated with modern kitchen cabinets, but VividCoat Painting offers a way to get the job done for less. We can save you thousands compared to the cost of new cabinets. </li>
+                    <li class="cabinetLI">Many homeowners put off a new look in their kitchen because of the high cost associated with modern kitchen cabinets, but Euro Top Painting offers a way to get the job done for less. We can save you thousands compared to the cost of new cabinets. </li>
                     <br>
                     <li class="cabinetLI">Your cabinets are the focal point of the kitchen. But they are often neglected and take the backseat to appliances or countertops. But having quality kitchen cabinets can transform your kitchen. For a fraction of the cost, adding a fresh finish can drastically improve the look and feel of your kitchen.</li>
                     <br>
@@ -267,24 +220,22 @@ if(isset($_POST['submit'])){
         <h1 style="font-size: 30px;"><span style="color: #0eb448;">Cabinet</span> Painting Gallery</h1>
         <div class="row">
             <div class="column">
-              <img class="galImg" loading="lazy" src="images/interior/Cabinets/1.jpg">
-              <img class="galImg" loading="lazy" src="images/interior/Cabinets/2.jpg">
+              <img class="galImg" loading="lazy" src="images/interior/Cabinets/12.jpeg">
               <img class="galImg" loading="lazy" src="images/interior/Cabinets/11.jpeg">
+              <img class="galImg" loading="lazy" src="images/interior/Cabinets/10.jpeg">
             </div>
             <div class="column">
-                <img class="galImg" loading="lazy" src="images/interior/Cabinets/3.jpg">
-                <img class="galImg" loading="lazy" src="images/interior/Cabinets/4.jpg">
-                <img class="galImg" loading="lazy" src="images/interior/Cabinets/12.jpeg">
+                <img class="galImg" loading="lazy" src="images/interior/Cabinets/9.jpeg">
+                <img class="galImg" loading="lazy" src="images/interior/Cabinets/8.jpeg">
+                <img class="galImg" loading="lazy" src="images/interior/Cabinets/7.jpeg">
             </div>
             <div class="column">
                 <img class="galImg" loading="lazy" src="images/interior/Cabinets/5.jpg">
-                <img class="galImg" loading="lazy" src="images/interior/Cabinets/6.jpg">
+                <img class="galImg" loading="lazy" src="images/interior/Cabinets/6.jpeg">
             </div>
             <div class="column">
-                <img class="galImg" loading="lazy" src="images/interior/Cabinets/7.jpeg">
-                <img class="galImg" loading="lazy" src="images/interior/Cabinets/8.jpeg">
-                <img class="galImg" loading="lazy" src="images/interior/Cabinets/9.jpeg">
-                <img class="galImg" loading="lazy" src="images/interior/Cabinets/10.jpeg">
+                <img class="galImg" loading="lazy" src="images/interior/Cabinets/5.jpeg">
+                <img class="galImg" loading="lazy" src="images/interior/Cabinets/4.jpg">
             </div>
           </div>
           <div class="slideshowContainer">
@@ -292,59 +243,49 @@ if(isset($_POST['submit'])){
 
                 <!-- Full-width images with number and caption text -->
                 <div class="mySlides fade">
-                    <img class="galImg" loading="lazy" src="images/interior/Cabinets/1.jpg" width="100%">
+                    <img class="galImg" loading="lazy" src="images/interior/Cabinets/12.jpeg" width="100%">
                     <div class="text"></div>
                   </div>
                 
-                <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/interior/Cabinets/2.jpg" width="100%">
-                  <div class="text"></div>
-                </div>
-              
-                <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/interior/Cabinets/3.jpg" width="100%">
-                  <div class="text"></div>
-                </div>
-                <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/interior/Cabinets/4.jpg" width="100%">
-                  <div class="text"></div>
-                </div>
-              
-                <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/interior/Cabinets/5.jpg" width="100%">
-                  <div class="text"></div>
-                </div>
-              
-                <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/interior/Cabinets/6.jpg" width="100%">
-                  <div class="text"></div>
-                </div>
-                <div class="mySlides fade">
-                    <img class="galImg" loading="lazy" src="images/interior/Cabinets/7.jpeg" width="100%">
-                    <div class="text"></div>
-                </div>
-              
-                <div class="mySlides fade">
-                    <img class="galImg" loading="lazy" src="images/interior/Cabinets/8.jpeg" width="100%">
-                    <div class="text"></div>
-                </div>
-              
-                <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/interior/Cabinets/9.jpeg" width="100%">
-                  <div class="text"></div>
-                </div>
-                <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/interior/Cabinets/10.jpeg" width="100%">
-                  <div class="text"></div>
-                </div>
-              
                 <div class="mySlides fade">
                   <img class="galImg" loading="lazy" src="images/interior/Cabinets/11.jpeg" width="100%">
                   <div class="text"></div>
                 </div>
               
                 <div class="mySlides fade">
-                  <img class="galImg" loading="lazy" src="images/interior/Cabinets/12.jpeg" width="100%">
+                  <img class="galImg" loading="lazy" src="images/interior/Cabinets/10.jpeg" width="100%">
+                  <div class="text"></div>
+                </div>
+                <div class="mySlides fade">
+                  <img class="galImg" loading="lazy" src="images/interior/Cabinets/9.jpeg" width="100%">
+                  <div class="text"></div>
+                </div>
+              
+                <div class="mySlides fade">
+                  <img class="galImg" loading="lazy" src="images/interior/Cabinets/8.jpeg" width="100%">
+                  <div class="text"></div>
+                </div>
+              
+                <div class="mySlides fade">
+                  <img class="galImg" loading="lazy" src="images/interior/Cabinets/7.jpeg" width="100%">
+                  <div class="text"></div>
+                </div>
+                <div class="mySlides fade">
+                    <img class="galImg" loading="lazy" src="images/interior/Cabinets/5.jpg" width="100%">
+                    <div class="text"></div>
+                </div>
+              
+                <div class="mySlides fade">
+                    <img class="galImg" loading="lazy" src="images/interior/Cabinets/6.jpeg" width="100%">
+                    <div class="text"></div>
+                </div>
+              
+                <div class="mySlides fade">
+                  <img class="galImg" loading="lazy" src="images/interior/Cabinets/5.jpeg" width="100%">
+                  <div class="text"></div>
+                </div>
+                <div class="mySlides fade">
+                  <img class="galImg" loading="lazy" src="images/interior/Cabinets/4.jpg" width="100%">
                   <div class="text"></div>
                 </div>
                 
@@ -367,8 +308,6 @@ if(isset($_POST['submit'])){
                 <span class="dot" onclick="currentSlide(8)"></span>
                 <span class="dot" onclick="currentSlide(9)"></span>
                 <span class="dot" onclick="currentSlide(19)"></span>
-                <span class="dot" onclick="currentSlide(11)"></span>
-                <span class="dot" onclick="currentSlide(12)"></span>
               </div>
           </div>
     </section>
@@ -380,25 +319,6 @@ if(isset($_POST['submit'])){
             </div>
             <div>
                 <a href="contact.php">Schedule Now!</a>
-            </div>
-        </div>
-    </section>
-    <section id="section8">
-        <div class="column3">
-            <div class="sec8Divs">
-                <div><i class="fas fa-map-marked-alt"></i></div>
-                <div><h4>VividCoat Painting LTD</h4>
-                    <h4>Ontario, Canada</h4></div> 
-            </div>
-            <div class="sec8Divs">
-                <div style="margin: 0 10px 10px 0;"><i class="far fa-envelope"></i></div>
-                <div><h4>Our Email</h4>
-                    <h4>VividCoatPainting@hotmail.com</h4></div> 
-            </div>
-            <div class="sec8Divs">
-                <div><i class="fas fa-mobile"></i></div>
-                <div><h4>Call Us For An Estimate</h4>
-                    <h4>416-566-1322</h4></div> 
             </div>
         </div>
     </section>
