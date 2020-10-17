@@ -1,10 +1,10 @@
 <header>
         <div class="logoDiv">
-            <a href="index.php"><img src="images/logo.png" alt="Vividcoat painting" width="35%"></a>
+            <a href="index.php"><img src="images/logo.png" alt="Euro Top painting" width="40%" style="margin-left: 10%;"></a>
         </div>
         <div class="estCallDiv">
             <a href="contact.php" class="getFreeEstBtn">Get a Free Estimate</a>
-            <a href="tel:416-566-1322" class="callBtn"><i class="fas fa-mobile-alt"></i> 416-566-1322</a>
+            <a href="tel:647-648-4253" class="callBtn"><i class="fas fa-mobile-alt"></i> 647-648-4253</a>
         </div>
     </header>
 
