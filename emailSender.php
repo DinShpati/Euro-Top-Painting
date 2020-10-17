@@ -1,6 +1,7 @@
 <?php
 
 require "vendor/autoload.php";
+include('config.php');
 
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -20,8 +21,8 @@ if(isset($_POST['submit'])){
 
         $mailer->Host = 'smtp.hostinger.com';
         $mailer->SMTPAuth = true;
-        $mailer->Username = 'estimates@EuroTopPainting.com';
-        $mailer->Password = 'Z3tT57cW_$_!_*';
+        $mailer->Username = $mailUsername;
+        $mailer->Password = $mailPass;
         $mailer->SMTPSecure = 'tls';
         $mailer->Port = 587;
         $mailer-> SMTPAuth = true;
