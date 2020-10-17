@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
         $mailer-> SMTPAuth = true;
 
 
-        $mailer->setFrom('estimates@EuroTopPainting.com', 'Estimate');
+        $mailer->setFrom('info@EuroTopPainting.com', 'Estimate');
         $mailer->addAddress('proendergamer03@gmail.com', 'Visar Ramadani');
 
         $mailer->isHTML(false);
