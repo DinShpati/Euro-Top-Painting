@@ -39,7 +39,7 @@
         <div>
             <h1>Follow Us</h1>
             <div class="socialMediBtnContainer">
-                <a href="https://www.facebook.com/VividcoatpaintingLTD/" class="socialBtn2">
+                <a href="https://www.facebook.com/Vividcoatpainting/" class="socialBtn2">
                     <div class="button button-2">
                         <i class="fab fa-facebook-f" style="padding: 0 7px;"></i>
                     </div>
@@ -74,7 +74,7 @@
         <div>
             <h1>About</h1>
             <p style="font-size: 15px;">
-                Euro Top Painting LTD is a professional painting company founded in 1999. We have been providing quality work at affordable prices for over 30 years.
+                Euro Top Painting is a professional painting company founded in 1999. We have been providing quality work at affordable prices for over 30 years.
                 Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! 
                 Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project!
                  Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee.
@@ -82,5 +82,5 @@
         </div>
     </footer>
     <div class="copyrights">
-        © 2020 All Rights Reserved | Euro Top Painting LTD | Website designed by <a href="dinshpati.com" style="text-decoration: none;">Din Shpati</a>
+        © 2020 All Rights Reserved | Euro Top Painting | Website designed by <a href="dinshpati.com" style="text-decoration: none;">Din Shpati</a>
     </div>

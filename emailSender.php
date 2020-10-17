@@ -29,7 +29,7 @@ if(isset($_POST['submit'])){
 
 
         $mailer->setFrom('estimates@EuroTopPainting.com', 'Estimate');
-        $mailer->addAddress('visaramadanixr@hotmail.com', 'Visar Ramadani');
+        $mailer->addAddress('proendergamer03@gmail.com', 'Visar Ramadani');
 
         $mailer->isHTML(false);
         $mailer->Subject = ($name . " is asking for a estimate");

@@ -10,14 +10,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/icon.png">
     <meta content="Euro Top Painting - The best painting company in Toronto, CA!" property=og:title>
-    <meta content="Euro Top Painting - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Euro Top Painting ltd. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee."
+    <meta content="Euro Top Painting - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Euro Top Painting . Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee."
           property=og:description>
     <meta content=EuroTopPainting.com property=og:url>
     <meta content=website property=og:type>
     <meta content=images/icon.png property=og:image>
     <meta content=summary_large_image property=twitter:card>
     <meta name="description"
-          content="Euro Top Painting - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Euro Top Painting ltd. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee.">
+          content="Euro Top Painting - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Euro Top Painting . Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee.">
     <meta property="og:image" content="images/main.jpg">
     <title>Euro Top Painting - The best painting company in Toronto, CA!</title>
 
@@ -99,7 +99,7 @@
         <div>
             <i class="fas fa-home"></i>
             <div style="height: 3px; background-color: #47b76f; width: inherit; margin: 10px 20%;"></div>
-            <p>We've been in business since 1999. With our longevity, you can feel safe that Euro Top Paitning LTD will take your project seriously with unmatched results.</p>
+            <p>We've been in business since 1999. With our longevity, you can feel safe that Euro Top Paitning  will take your project seriously with unmatched results.</p>
         </div>
         <div>
             <i class="fas fa-money-bill-wave"></i>

@@ -8,14 +8,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/icon.png">
     <meta content="Euro Top Painting - The best painting company in Toronto, CA!" property=og:title>
-    <meta content="Euro Top Painting - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Euro Top Painting ltd. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee."
+    <meta content="Euro Top Painting - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Euro Top Painting. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee."
           property=og:description>
     <meta content=EuroTopPainting.com property=og:url>
     <meta content=website property=og:type>
     <meta content=images/icon.png property=og:image>
     <meta content=summary_large_image property=twitter:card>
     <meta name="description"
-          content="Euro Top Painting - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Euro Top Painting ltd. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee.">
+          content="Euro Top Painting - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Euro Top Painting . Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee.">
     <meta property="og:image" content="images/main.jpg">
     <title>Euro Top Painting - The best painting company in Toronto, CA!</title>
 
@@ -42,10 +42,10 @@
                 <h1 class="bigText">Wallpaper services</h1>
                 <h2 class="midText">Quality painting done right</h2>
                 <div class="sectionOneBadges">
-                    <div> <img src="images/homestars.png" alt="VividCoat painting - homestars verified"> </div>
-                    <div> <img src="images/30YearsInBussiness.png" alt="VividCoat painting - homestars verified"> </div>
-                    <div><img src="images/warranty (1).png" alt="VividCoat painting - homestars verified"></div>
-                    <div><img src="images/Homestars-best-of-2020-2.png" alt="VividCoat painting - homestars verified"></div>
+                    <div> <img src="images/homestars.png" alt="EuroTop painting - homestars verified"> </div>
+                    <div> <img src="images/30YearsInBussiness.png" alt="EuroTop painting - homestars verified"> </div>
+                    <div><img src="images/warranty (1).png" alt="EuroTop painting - homestars verified"></div>
+                    <div><img src="images/Homestars-best-of-2020-2.png" alt="EuroTop painting - homestars verified"></div>
                 </div>
             </div>
         </div>
@@ -131,22 +131,22 @@
 
     <section id="section5">
         <h1 style="font-size: 30px;">Why choose <span style="color: #0eb448;">us?</span></h1>
-        <h3>VividCoat Painting sets the highest standard in service and customer satisfaction.</h3>
+        <h3>EuroTop Painting sets the highest standard in service and customer satisfaction.</h3>
         <div style="height: 3px; background-color: #47b76f; width: inherit; margin: 0 25vw;"></div>
         <br>
         <br>
         <div id="section5Divs">
             <div>
                 <h3>100% <span style="color: #0eb448;">Satisfaction</span> Gurantee</h3>
-                <img loading="lazy" src="images/100Sat.png" alt="VividCoat Painting LTD 100% Satisfatcion gurantee" style="max-width: 33%;">
+                <img loading="lazy" src="images/100Sat.png" alt="EuroTop Painting  100% Satisfatcion gurantee" style="max-width: 33%;">
             </div>
             <div>
                 <h3>Unmatched <span style="color: #0eb448;">2-year</span> Quality Warranty</h3>
-                <img loading="lazy" src="images/2yeargur.png" alt="VividCoat Painting LTD 2 year gurantee" style="max-width: 33%;">
+                <img loading="lazy" src="images/2yeargur.png" alt="EuroTop Painting  2 year gurantee" style="max-width: 33%;">
             </div>
             <div>
                 <h3><span style="color: #0eb448;">30-Years </span>experience</h3>
-                    <img loading="lazy" src="images/30inBus.png" alt="VividCoat Painting LTD 30 years in business" style="max-width: 33%;">
+                    <img loading="lazy" src="images/30inBus.png" alt="EuroTop Painting  30 years in business" style="max-width: 33%;">
             </div>
             
         </div>
@@ -154,7 +154,7 @@
     <section id="servicesWallpaper">
         <div class="blur">
             <h1 style="font-size: 30px;color: white;">Wallpaper <span style="color: #fff;">Services</span></h1>
-            <h3 style="color: white;">No matter what type of room or surface you are looking to add Wallpapers, VividCoat Painting is there to help.</h3>
+            <h3 style="color: white;">No matter what type of room or surface you are looking to add Wallpapers, EuroTop Painting is there to help.</h3>
             <div style="height: 3px; background-color: #47b76f; width: inherit; margin: 0 25vw;"></div>
             <br>
             <br>
@@ -196,18 +196,18 @@
         <div class="column2" style="margin-bottom: 50px;">
             <div>
                 <h1>
-                    Why should VividCoat add a wallpapers to my home?
+                    Why should EuroTop add a wallpapers to my home?
                 </h1>
                 <p>There’s nothing like a crispy new layer of wallpapers to boost your home’s interior look! While there are various ways to improve the interior of your house, wallpapers are probably the best choice if you really want your room to POP!.</p>
             </div>
             <div style="text-align: center;">
-                <img loading="lazy" style="width: 80%;" src="images/interior/Wallpapers/pexels-victoria-borodinova-1648776.jpg" alt="Would it be possible to revieve a free estimate before starting any work? VividCoat Painting LTD">
+                <img loading="lazy" style="width: 80%;" src="images/interior/Wallpapers/pexels-victoria-borodinova-1648776.jpg" alt="Would it be possible to revieve a free estimate before starting any work? EuroTop Painting ">
             </div>
         </div>
         <hr>
         <div class="column2" style="margin-top: 50px; margin-bottom: 50px;">
             <div style="text-align: center;">
-                <img loading="lazy" style="width: 80%;" src="images/interior/Wallpapers/pexels-houzlook-com-3797991.jpg" alt="Would it be possible to revieve a free estimate before starting any work? VividCoat Painting LTD">
+                <img loading="lazy" style="width: 80%;" src="images/interior/Wallpapers/pexels-houzlook-com-3797991.jpg" alt="Would it be possible to revieve a free estimate before starting any work? EuroTop Painting ">
             </div>
             <div>
                 <h1>
@@ -223,17 +223,17 @@
                 <h1>
                     Can you help me choose the right patterns for my wallpaper?
                 </h1>
-                <p>VividCoat Painting's experienced interior and exterior house painters are ready to assist you every step of the way, from selecting and ordering wallpaper designs and scheduling the painters, to completing your wallpaper installation job flawlessly.
+                <p>EuroTop Painting's experienced interior and exterior house painters are ready to assist you every step of the way, from selecting and ordering wallpaper designs and scheduling the painters, to completing your wallpaper installation job flawlessly.
                 </p>
             </div>
             <div style="text-align: center;">
-                <img loading="lazy" style="width: 50%;" src="images/interior/Gallery/12.jpg" alt="Would it be possible to revieve a free estimate before starting any work? VividCoat Painting LTD">
+                <img loading="lazy" style="width: 50%;" src="images/interior/Gallery/12.jpg" alt="Would it be possible to revieve a free estimate before starting any work? EuroTop Painting ">
             </div>
         </div>
         <hr>
         <div class="column2" style="margin-top: 50px;margin-bottom: 50px;">
             <div style="text-align: center;">
-                <img loading="lazy" style="width: 60%;" src="images/interior/Gallery/14.jpg" alt="Would it be possible to revieve a free estimate before starting any work? VividCoat Painting LTD">
+                <img loading="lazy" style="width: 60%;" src="images/interior/Gallery/14.jpg" alt="Would it be possible to revieve a free estimate before starting any work? EuroTop Painting ">
             </div>
             <div>
                 <h1>
@@ -259,7 +259,7 @@
                     </div>
             </div>
             <div style="text-align: center;">
-                <img loading="lazy" style="width: 80%;" src="images/interior/redWall.jpg" alt="Would it be possible to revieve a free estimate before starting any work? VividCoat Painting LTD">
+                <img loading="lazy" style="width: 80%;" src="images/interior/redWall.jpg" alt="Would it be possible to revieve a free estimate before starting any work? Euro Top Painting ">
             </div>
         </div>
         <br>

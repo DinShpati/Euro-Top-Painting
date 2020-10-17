@@ -8,14 +8,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/icon.png">
     <meta content="Euro Top Painting - The best painting company in Toronto, CA!" property=og:title>
-    <meta content="Euro Top Painting - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Euro Top Painting ltd. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee."
+    <meta content="Euro Top Painting - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Euro Top Painting . Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee."
           property=og:description>
     <meta content=EuroTopPainting.com property=og:url>
     <meta content=website property=og:type>
     <meta content=images/icon.png property=og:image>
     <meta content=summary_large_image property=twitter:card>
     <meta name="description"
-          content="Euro Top Painting - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Euro Top Painting ltd. Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee.">
+          content="Euro Top Painting - Every one of our services is backed by our 100% Satisfaction Guarantee. We are fully committed to making your home dreams come true! Euro Top Painting . Our track record has proven the quality of our service! Our expert, skilled staff are here to meet all of your needs – from start to finish of your project! Even when the job is done, we’re still there for you. All of our work is backed by an unmatched Two Year Quality Guarantee.">
     <meta property="og:image" content="images/main.jpg">
     <title>Euro Top Painting - The best painting company in Toronto, CA!</title>
 
@@ -56,7 +56,7 @@
                 <h1 style="font-size: 30px;" class="white">Carpentry Service Contractors</h1>
                 <hr>
                 <div class="ratDiv">
-                    <p style="color: white;">To get the best improvement results in your commercial sectors in New York, you need an experienced contractor. Euro Top Painting addresses a wide variety of primary carpentry services whether it is installing handrails or putting up new walls we pay keen attention to every detail. Our installation unit handles everything with extreme care and precision. We have obtained a quality reputation throughout our years in service; winning multiple HomeStars Awards and gathering hundreds of 5 Star or Grade A reviews across the web. Now worry no more, as VivivdCoat Painting offers all carpentry services at competitive prices.</p>
+                    <p style="color: white;">To get the best improvement results in your commercial sectors in Toronto, you need an experienced contractor. Euro Top Painting addresses a wide variety of primary carpentry services whether it is installing handrails or putting up new walls we pay keen attention to every detail. Our installation unit handles everything with extreme care and precision. We have obtained a quality reputation throughout our years in service; winning multiple HomeStars Awards and gathering hundreds of 5 Star or Grade A reviews across the web. Now worry no more, as VivivdCoat Painting offers all carpentry services at competitive prices.</p>
                 </div>
                 <hr>
                 <div class="ratDiv">
@@ -138,15 +138,15 @@
         <div id="section5Divs">
             <div>
                 <h3>100% <span style="color: #0eb448;">Satisfaction</span> Gurantee</h3>
-                <img loading="lazy" src="images/100Sat.png" alt="Euro Top Painting LTD 100% Satisfatcion gurantee" style="max-width: 33%;">
+                <img loading="lazy" src="images/100Sat.png" alt="Euro Top Painting  100% Satisfatcion gurantee" style="max-width: 33%;">
             </div>
             <div>
                 <h3>Unmatched <span style="color: #0eb448;">2-year</span> Quality Warranty</h3>
-                <img loading="lazy" src="images/2yeargur.png" alt="Euro Top Painting LTD 2 year gurantee" style="max-width: 33%;">
+                <img loading="lazy" src="images/2yeargur.png" alt="Euro Top Painting  2 year gurantee" style="max-width: 33%;">
             </div>
             <div>
                 <h3><span style="color: #0eb448;">30-Years </span>experience</h3>
-                    <img loading="lazy" src="images/30inBus.png" alt="Euro Top Painting LTD 30 years in business" style="max-width: 33%;">
+                    <img loading="lazy" src="images/30inBus.png" alt="Euro Top Painting  30 years in business" style="max-width: 33%;">
             </div>
             
         </div>
@@ -192,13 +192,13 @@
                 <p>Usually all exterior carpentry should be refinished every two to three years. Exterior carpentry maintenance, and when you should do it, depends on variables such as the type of material, the current condition of the wood, the weather of the area you live in, and more.</p>
             </div>
             <div style="text-align: center;">
-                <img loading="lazy" style="width: 60%;" src="images/exterior/SIDING (2).jpg" alt="Would it be possible to revieve a free estimate before starting any work? Euro Top Painting LTD">
+                <img loading="lazy" style="width: 60%;" src="images/exterior/SIDING (2).jpg" alt="Would it be possible to revieve a free estimate before starting any work? Euro Top Painting ">
             </div>
         </div>
         <hr>
         <div class="column2" style="margin-top: 50px; margin-bottom: 50px;">
             <div style="text-align: center;">
-                <img loading="lazy" style="width: 80%;" src="images/exterior/b.jpg" alt="Would it be possible to revieve a free estimate before starting any work? Euro Top Painting LTD">
+                <img loading="lazy" style="width: 80%;" src="images/exterior/b.jpg" alt="Would it be possible to revieve a free estimate before starting any work? Euro Top Painting ">
             </div>
             <div>
                 <h1>
@@ -222,7 +222,7 @@
                     </div>
             </div>
             <div style="text-align: center;">
-                <img loading="lazy" style="width: 80%;" src="images/exterior/decks/porch.jpg" alt="Would it be possible to revieve a free estimate before starting any work? Euro Top Painting LTD">
+                <img loading="lazy" style="width: 80%;" src="images/exterior/decks/porch.jpg" alt="Would it be possible to revieve a free estimate before starting any work? Euro Top Painting ">
             </div>
         </div>
         <br>
