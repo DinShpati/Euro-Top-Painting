@@ -38,7 +38,7 @@ if(isset($_POST['submit'])){
 
         $mailer->send();
         $mailer->ClearAllRecipients();
-        echo "<script>alert('Your message was recieved, we will get back to you shortly');</script>";
+        echo "<script>alert('Your message was recieved, we will get back to you soon.');</script>";
     }catch (Exception $e) {
         echo "<script>alert('Your message was not recieved please try calling or emailing us');</script>";
     }
