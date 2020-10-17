@@ -1,11 +1,11 @@
 <?php
 
 require "vendor/autoload.php";
-include('config.php');
-
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+
+$configs = include('config.php');
 
 $mailer = new PHPMailer();
 if(isset($_POST['submit'])){
@@ -21,8 +21,8 @@ if(isset($_POST['submit'])){
 
         $mailer->Host = 'smtp.hostinger.com';
         $mailer->SMTPAuth = true;
-        $mailer->Username = $mailUsername;
-        $mailer->Password = $mailPass;
+        $mailer->Username = $configs->mailUsername;
+        $mailer->Password = $configs->mailPass;
         $mailer->SMTPSecure = 'tls';
         $mailer->Port = 587;
         $mailer-> SMTPAuth = true;
