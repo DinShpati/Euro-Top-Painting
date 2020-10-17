@@ -44,7 +44,7 @@
                 <a href="#" class="spepcial fa fa-facebook"></a>
                 <h4  class="num">Main Line: 647-648-4253</h4>
                 <h4  class="num">Secondary: 416-566-1322</h4>
-                <h4 class="email">Euro TopPainting@hotmail.com</h4>
+                <h4 class="email">visaramadanixr@hotmail.com</h4>
                 
                
 
