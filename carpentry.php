@@ -56,7 +56,7 @@
                 <h1 style="font-size: 30px;" class="white">Carpentry Service Contractors</h1>
                 <hr>
                 <div class="ratDiv">
-                    <p style="color: white;">To get the best improvement results in your commercial sectors in Toronto, you need an experienced contractor. Euro Top Painting addresses a wide variety of primary carpentry services whether it is installing handrails or putting up new walls we pay keen attention to every detail. Our installation unit handles everything with extreme care and precision. We have obtained a quality reputation throughout our years in service; winning multiple HomeStars Awards and gathering hundreds of 5 Star or Grade A reviews across the web. Now worry no more, as VivivdCoat Painting offers all carpentry services at competitive prices.</p>
+                    <p style="color: white;">To get the best improvement results in your commercial sectors in Toronto, you need an experienced contractor. Euro Top Painting addresses a wide variety of primary carpentry services whether it is installing handrails or putting up new walls we pay keen attention to every detail. Our installation unit handles everything with extreme care and precision. We have obtained a quality reputation throughout our years in service; winning multiple HomeStars Awards and gathering hundreds of 5 Star or Grade A reviews across the web. Now worry no more, as Euro Top Painting offers all carpentry services at competitive prices.</p>
                 </div>
                 <hr>
                 <div class="ratDiv">
